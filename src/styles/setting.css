@@ -96,6 +96,10 @@ meter::-webkit-meter-optimum-value {
     animation-delay: 4s;
 }
 
+.icon-whatsapp {
+    animation-delay: 5s;
+}
+
 @keyframes fadeUpDown {
     0% {
         transform: translateY(0);

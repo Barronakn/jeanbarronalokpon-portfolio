@@ -30,25 +30,25 @@ const About = () => {
               projets Web complexes.
             </p>
           </div>
-          <ul className="list my-10 relative pl-8 z-10 before:absolute before:top-0 before:bottom-0 before:left-2 before:m-auto before:w-1 before:bg-black before:-z-10 before:h-5/6 text-white">
+          <ul className="list my-10 relative px-8 z-10 before:absolute before:top-0 before:bottom-0 before:left-2 before:m-auto before:w-1 before:bg-black before:-z-10 before:h-5/6 text-white">
             <li>
-              <span className="font-bold">Habite à :</span> Abomey-Calavi, Bénin
+              <span className="font-bold text-xs sm:text-base">Habite à :</span> <span className="text-xs sm:text-base">Abomey-Calavi, Bénin</span>
             </li>
             <li>
-              <span className="font-bold">Age :</span> 21
+              <span className="font-bold text-xs sm:text-base">Age :</span> <span className="text-xs sm:text-base">21</span>
             </li>
             <li>
-              <span className="font-bold">Genre :</span> Masculin
+              <span className="font-bold text-xs sm:text-base">Genre :</span> <span className="text-xs sm:text-base">Masculin</span>
             </li>
             <li>
-              <span className="font-bold">Email : </span>{" "}
-              <Link className="hover:underline" to="mailto:jeanbarronalokpon@gmail.com">
+              <span className="font-bold text-xs sm:text-base">Email : </span>{" "}
+              <Link className="hover:underline text-xs sm:text-base" to="mailto:jeanbarronalokpon@gmail.com">
                 jeanbarronalokpon@gmail.com
               </Link>
             </li>
             <li>
-              <span className="font-bold">WhatsApp : </span>{" "}
-              <Link className="hover:underline" to="https://wa.me/22952291586">+229 61225071</Link>
+              <span className="font-bold text-xs sm:text-base">WhatsApp : </span>{" "}
+              <Link className="hover:underline text-xs sm:text-base" to="https://wa.me/22952291586">+229 61225071</Link>
             </li>
           </ul>
 
