@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "../src/styles/setting.css";
+@import "../src/styles/index.css";
+@import 'animate.css';
+
+
+@layer components {
+  .list li {
+     @apply text-xl before:absolute before:left-1 mx-2 my-0 before:w-3 before:border-4 before:border-blue-600 before:bg-white before:-z-10 before:h-3 before:rounded-full;
+  }
+}
