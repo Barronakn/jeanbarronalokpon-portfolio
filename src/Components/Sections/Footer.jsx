@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import github from "../../assets/sociaux/github.png";
 import facebook from "../../assets/sociaux/facebook.png";
 import wathsApp from "../../assets/sociaux/whatsapp.png";
 import linkedin from "../../assets/sociaux/linkedin.png";
 import mail from "../../assets/sociaux/mail.png";
+import FooterSociaux from "../FooterSociaux";
 
 const Footer = () => {
   return (
@@ -16,32 +18,11 @@ const Footer = () => {
         </div>
 
         <ul className="mt-4 flex flex-row justify-center items-center gap-5">
-          <div className="flex flex-row justify-center items-center gap-2">
-            <Link
-              className="hover:underline"
-              to="mailto:jeanbarronalokpon@gmail.com"
-            >
-              <img loading="lazy" className="w-8 h-8" src={mail} alt="mail-icon" />
-            </Link>
-          </div>
-          <div className="flex flex-row justify-center items-center gap-2">
-            <Link className="hover:underline" to="https://wa.me/22961225071">
-              <img loading="lazy" className="w-8 h-8" src={wathsApp} alt="wathsApp-icon" />
-            </Link>
-          </div>
-          <div className="flex flex-row justify-center items-center gap-2">
-            <Link to="htpps://www.linkedin.com/in/jean-barron-alopkon-66501b22b">
-              <img loading="lazy" className="w-8 h-8" src={linkedin} alt="linkedin-icon" />
-            </Link>
-          </div>
-          <div className="flex flex-row justify-center items-center gap-2">
-            <Link
-              className="hover:underline"
-              to="htpps://www.facebook.com/jeanbarron.akn"
-            >
-              <img loading="lazy" className="w-7 h-7" src={facebook} alt="facebook-icon" />
-            </Link>
-          </div>
+          <FooterSociaux link="https://github.com/Barronakn" icon={github} alt="github-icon" />
+          <FooterSociaux link="mailto:jeanbarronalokpon@gmail.com" icon={mail} alt="mail-icon" />
+          <FooterSociaux link="https://wa.me/22961225071" icon={wathsApp} alt="wathsApp-icon" />
+          <FooterSociaux link="htpps://www.linkedin.com/in/jean-barron-alopkon-66501b22b" icon={linkedin} alt="linkedin-icon" />
+          <FooterSociaux link="htpps://www.facebook.com/jeanbarron.akn" icon={facebook} alt="facebook-icon" />
         </ul>
       </div>
     </footer>
