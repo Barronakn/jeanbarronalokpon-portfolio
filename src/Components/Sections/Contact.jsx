@@ -74,12 +74,12 @@ const Contact = () => {
   return (
     <section id="contact" className="bg-sky-blue py-10">
       <div className="mx-10 sm:mx-auto">
-        <div className="text-blue-600 bg-blue-600 bg-opacity-20 text-lg rounded-xl w-40 mx-auto my-0 fadeInUp">
+        <div className="text-blue-600 bg-blue-600 bg-opacity-20 text-lg rounded-xl w-40 mx-auto my-0">
           <h4 className="text-center mb-10">Contact</h4>
         </div>
 
         <div className="flex flex-col md:flex-row justify-evenly items-center">
-          <div>
+          <div data-aos="fade-right">
             <img loading="lazy"
               className="w-52 md:w-96"
               src={contact}
@@ -87,7 +87,7 @@ const Contact = () => {
             />
           </div>
 
-          <form onSubmit={handleSubmit} className="p-4 shadow-lg w-full md:w-1/3">
+          <form data-aos="fade-left" onSubmit={handleSubmit} className="p-4 shadow-lg w-full md:w-1/3">
             {successMessage && (
               <p className="text-green-500">{successMessage}</p>
             )}

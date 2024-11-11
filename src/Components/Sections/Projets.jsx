@@ -23,7 +23,10 @@ const Projets = () => {
               <h4>Projets</h4>
             </div>
           </div>
-          <h1 className="text-center text-2xl md:text-4xl mt-10 mb-20 text-orange-500 font-bold">
+          <h1
+            data-aos="fade-down"
+            className="text-center text-2xl md:text-4xl mt-10 mb-20 text-orange-500 font-bold"
+          >
             Mes réalisations
           </h1>
 

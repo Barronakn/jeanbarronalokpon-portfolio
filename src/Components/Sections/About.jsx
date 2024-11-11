@@ -10,11 +10,12 @@ const About = () => {
       <div className="flex flex-col xl:flex-row justify-around mx-10 sm:mx-20 md:mx-32 mb-10">
         <div className="xl:w-1/4 py-3 relative z-0 mx-auto my-0">
           <div className="absolute left-4 top-8 sm:top-0 sm:left-12 -z-50 border-blue-600 border-8 h-5/6 w-full"></div>
-          <div className="fadeInUp z-40 mt-10">
+          <div data-aos="fade-right" className="z-40 mt-10">
             <img loading="lazy" src={person} alt="barron-img" />
           </div>
         </div>
-        <div className="fadeInRight xl:w-3/6">
+
+        <div data-aos="fade-left" className="xl:w-3/6">
           <div>
             <h1 className="text-2xl md:text-3xl font-bold text-orange-500">
               Jean-Barron ALOKPON

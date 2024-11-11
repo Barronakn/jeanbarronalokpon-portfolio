@@ -48,18 +48,21 @@ const Client = () => {
         </span>
         <h2 className="text-lg">Clients</h2>
       </div>
+
       <div className="flex flex-col items-center">
         <span className="num text-5xl" data-val="8">
           0
         </span>
         <h2 className="text-lg">Projets Professionnels</h2>
       </div>
+
       <div className="flex flex-col items-center">
         <span className="num text-5xl" data-val="20">
           0
         </span>
         <h2 className="text-lg">Projets Personnels</h2>
       </div>
+      
       <div className="flex flex-col items-center">
         <span className="num text-5xl" data-val="03">
           0
