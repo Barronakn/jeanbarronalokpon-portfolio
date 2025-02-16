@@ -39,7 +39,7 @@ Aider les entreprises et entrepreneurs à **créer des sites web performants et 
 
 3. **Lancer le serveur frontend**  
    ```bash
-   npm run dev
+   npm start
    ```
 
 ## 📌 Déploiement  
