@@ -1,16 +1,16 @@
 import React from "react";
-import refonte from "../../assets/img/refonte.png";
-import vitrine from "../../assets/img/vitrine.png";
-import blog from "../../assets/img/blog.png";
-import landing from "../../assets/img/landing page.png";
-import boutique from "../../assets/img/e-commerce.png";
-import Card from "../Card";
-import Client from "../Client";
+import refonte from "../../../assets/img/refonte.png";
+import vitrine from "../../../assets/img/vitrine.png";
+import blog from "../../../assets/img/blog.png";
+import landing from "../../../assets/img/landing page.png";
+import boutique from "../../../assets/img/e-commerce.png";
+import Card from "./Card";
+import Client from "./Client";
 
 const Services = () => {
   return (
-    <section id="services" className="pb-10 bg-purple-sky">
-      <div className="container mb-10">
+    <section id="services" className="bg-gray-200 pt-10">
+      <div className="container pb-10">
         <div className="">
           <p className="text-center text-blue-600 bg-blue-600 bg-opacity-20 text-lg rounded-xl w-40 mx-auto my-0">
             Services

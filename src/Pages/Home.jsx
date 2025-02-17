@@ -1,7 +1,13 @@
 import React from "react";
 import Nav from "../Layouts/Nav";
 import Heros from "../Layouts/Heros";
-import { About, Contact, Footer, Projets, Services } from "../Components/Sections";
+import {
+  About,
+  Contact,
+  Footer,
+  Projets,
+  Services,
+} from "../Components/Sections";
 import WhatsAppIcon from "../Components/WhatsAppIcon";
 
 const Home = () => {

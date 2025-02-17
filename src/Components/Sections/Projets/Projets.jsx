@@ -2,20 +2,20 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
-import francite from "../../assets/img/francite.png";
 import { EffectCards } from "swiper/modules";
-import carte from "../../assets/img/carte.png";
-import koulkool from "../../assets/img/koulkool.png";
-import country from "../../assets/img/country.png";
-import ballamas from "../../assets/img/ballamas.png";
-import nft from "../../assets/img/nft.png";
-import tokena from "../../assets/img/tokena.png";
-import cargo from "../../assets/img/cargo.png";
-import Card from "../Card";
+import francite from "../../../assets/img/francite.png";
+import carte from "../../../assets/img/carte.png";
+import koulkool from "../../../assets/img/koulkool.png";
+import country from "../../../assets/img/country.png";
+import ballamas from "../../../assets/img/ballamas.png";
+import nft from "../../../assets/img/nft.png";
+import tokena from "../../../assets/img/tokena.png";
+import cargo from "../../../assets/img/cargo.png";
+import Card from "../Services/Card";
 
 const Projets = () => {
   return (
-    <section id="projets" className="bg-purple-sky">
+    <section id="projets" className="bg-gray-200 pt-10">
       <div className="pb-10">
         <div className="container">
           <div className="text-center">
@@ -34,7 +34,7 @@ const Projets = () => {
             effect={"cards"}
             grabCursor={true}
             modules={[EffectCards]}
-            className="mySwiper w-48 h-28 md:w-[400px] md:h-[200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-3 mx-10 md:mx-20 lg:mx-32 place-items-center text-justify"
+            className="mySwiper shadow-2xl w-48 h-28 md:w-[400px] md:h-[200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-3 mx-10 md:mx-20 lg:mx-32 place-items-center text-justify"
           >
             <SwiperSlide>
               <Card

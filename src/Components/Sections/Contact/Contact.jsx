@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import contact from "../../assets/Contact us-amico.png";
+import contact from "../../../assets/Contact us-amico.png";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -80,14 +80,19 @@ const Contact = () => {
 
         <div className="flex flex-col md:flex-row justify-evenly items-center">
           <div data-aos="fade-right">
-            <img loading="lazy"
+            <img
+              loading="lazy"
               className="w-52 md:w-96"
               src={contact}
               alt="contact-us-img"
             />
           </div>
 
-          <form data-aos="fade-left" onSubmit={handleSubmit} className="p-4 shadow-lg w-full md:w-1/3">
+          <form
+            data-aos="fade-left"
+            onSubmit={handleSubmit}
+            className="p-4 shadow-lg w-full md:w-1/3"
+          >
             {successMessage && (
               <p className="text-green-500">{successMessage}</p>
             )}
