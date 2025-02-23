@@ -9,29 +9,37 @@ const DesktopNav = () => {
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
-    const navlink = document.querySelectorAll(".nav-bar ul li a");
 
     window.onscroll = () => {
+      let scrollPos = window.scrollY;
+
       sections.forEach((section) => {
-        let top = window.scrollY;
         let offset = section.offsetTop - 150;
         let height = section.offsetHeight;
         let id = section.getAttribute("id");
 
-        if (top >= offset && top < offset + height) {
-          navlink.forEach((link) => {
-            link.classList.remove("active");
-            document
-              .querySelector(".nav-bar ul li a[href*=" + id + "]")
-              .classList.add("active");
-          });
+        if (scrollPos >= offset && scrollPos < offset + height) {
+          document
+            .querySelectorAll(".nav-bar ul li a")
+            .forEach((link) => link.classList.remove("active"));
+
+          const activeLink = document.querySelector(
+            `.nav-bar ul li a[href="#${id}"]`
+          );
+          if (activeLink) {
+            activeLink.classList.add("active");
+          }
         }
       });
     };
-  });
+
+    return () => {
+      window.onscroll = null;
+    };
+  }, []);
 
   return (
-    <div className="nav-bar md:block hidden text-gray-300">
+    <div className="hidden text-gray-300 nav-bar md:block">
       <ul className="flex flex-row gap-10 text-base md:text-lg">
         <li>
           <a
