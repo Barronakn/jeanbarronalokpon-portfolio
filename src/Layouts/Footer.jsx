@@ -8,13 +8,15 @@ import mail from "../assets/sociaux/mail.png";
 import FooterSociaux from "../Components/FooterSociaux";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-purple-sky text-white py-5 px-10 md:px-20">
       <div className="flex flex-col md:flex-row items-center justify-between">
         <div>
           <p className="text-center text-white mt-2">
-            Copyright © 2024 -{" "}
-            <Link className="text-blue-700 hover:underline" href="/">
+            Copyright © {currentYear} -{" "}
+            <Link className="text-blue-700 hover:underline" to="/">
               Jean-Barron ALOKPON
             </Link>{" "}
             | Tous droits réservés.
@@ -38,12 +40,12 @@ const Footer = () => {
             alt="wathsApp-icon"
           />
           <FooterSociaux
-            link="htpps://www.linkedin.com/in/jean-barron-alopkon"
+            link="https://www.linkedin.com/in/jean-barron-alokpon"
             icon={linkedin}
             alt="linkedin-icon"
           />
           <FooterSociaux
-            link="htpps://www.facebook.com/jeanbarron.akn"
+            link="https://www.facebook.com/jeanbarron.akn"
             icon={facebook}
             alt="facebook-icon"
           />
