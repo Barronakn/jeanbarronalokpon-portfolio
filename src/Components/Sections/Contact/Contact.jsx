@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Contact = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <section id="contact" className="bg-sky-blue py-10">
@@ -9,15 +15,10 @@ const Contact = () => {
           <h4 className="text-center mb-10">Contact</h4>
         </div>
 
-      <div
-        className="calendly-inline-widget min-w-80 h-[700px]"
-        data-url="https://calendly.com/jeanbarronalokpon/30min"
-      ></div>
-      <script
-        type="text/javascript"
-        src="https://assets.calendly.com/assets/external/widget.js"
-        async
-      ></script>
+        <div
+          className="calendly-inline-widget min-w-80 h-[700px]"
+          data-url="https://calendly.com/jeanbarronalokpon/30min"
+        ></div>
       </div>
     </section>
   );
