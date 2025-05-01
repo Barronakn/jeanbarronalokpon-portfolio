@@ -9,10 +9,12 @@ import {
   Services,
 } from "../Components/Sections";
 import WhatsAppIcon from "../Components/WhatsAppIcon";
+import { Analytics } from "@vercel/analytics/react"
 
 const Home = () => {
   return (
     <section id="home" className="bg-gray-200">
+      <Analytics />
       <Nav />
       <Heros />
       <About />
