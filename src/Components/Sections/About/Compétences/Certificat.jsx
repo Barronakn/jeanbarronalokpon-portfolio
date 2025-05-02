@@ -3,11 +3,27 @@ import CertificatFigmaToCode from "../../../../assets/img/certificat figma to co
 import CertificatImage1 from "../../../../assets/img/certificat html et css.png";
 import CertificatImage2 from "../../../../assets/img/certificat intro au frontend.png";
 import CertificatImage3 from "../../../../assets/img/certificat intro au backend.png";
+import CertificatImage4 from "../../../../assets/img/certificat frontend and web dev.png";
+import CertificatImage5 from "../../../../assets/img/certificat frontend app react.png";
 import CertificatsList from "./CertificatsList";
 
 const Certificat = () => {
   return (
     <div className="bg-white grid grid-cols-1 lg:grid-cols-2 gap-10 p-6 shadow-lg rounded-xl">
+      <CertificatsList
+        certificatImage={CertificatImage4}
+        certificatDesc="certificat frontend and web dev"
+        certificatLink="https://www.coursera.org/account/accomplishments/records/FX9JUAFS1JZN"
+        certificatName="Getting Started with Front-End and Web Development"
+      />
+      
+      <CertificatsList
+        certificatImage={CertificatImage5}
+        certificatDesc="certificat frontend app react"
+        certificatLink="https://www.coursera.org/account/accomplishments/records/J66WS83G756Y"
+        certificatName="Developing Front-End Apps with React"
+      />
+
       <CertificatsList
         certificatImage={CertificatImage1}
         certificatDesc="certificat html et css"

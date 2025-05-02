@@ -11,6 +11,7 @@ import codeqr from "../../../assets/img/codeqr.png";
 import medium from "../../../assets/img/mediumish.png";
 import enjoy from "../../../assets/img/enjoy.png";
 import fylla from "../../../assets/img/fylla.png";
+import klean from "../../../assets/img/klean.fr.png";
 import github from "../../../assets/img/github.png";
 import ballamas from "../../../assets/img/ballamas.png";
 import nft from "../../../assets/img/nft.png";
@@ -47,6 +48,14 @@ const Projets = () => {
                 modules={[EffectCards]}
                 className="mySwiper shadow-2xl w-48 h-28 md:w-[400px] md:h-[200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-3 mx-10 md:mx-20 lg:mx-32 place-items-center text-justify"
               >
+              <SwiperSlide>
+                <Card
+                  overview={klean}
+                  link="https://www.2-klean.fr/"
+                  action="Voir le site"
+                />
+              </SwiperSlide>
+
                 <SwiperSlide>
                   <Card
                     overview={francite}
