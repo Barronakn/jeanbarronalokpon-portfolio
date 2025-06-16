@@ -3,9 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-cards";
 import { EffectCards } from "swiper/modules";
-import francite from "../../../assets/img/francite.png";
+import landingpage2klean from "../../../assets/img/landingpage-2klean.png";
 import carte from "../../../assets/img/carte.png";
-import koulkool from "../../../assets/img/koulkool.png";
 import country from "../../../assets/img/country.png";
 import codeqr from "../../../assets/img/codeqr.png";
 import medium from "../../../assets/img/mediumish.png";
@@ -51,15 +50,15 @@ const Projets = () => {
               <SwiperSlide>
                 <Card
                   overview={klean}
-                  link="https://www.2-klean.fr/"
+                  link="https://2-klean.fr/"
                   action="Voir le site"
                 />
               </SwiperSlide>
 
                 <SwiperSlide>
                   <Card
-                    overview={francite}
-                    link="https://www.francite.eu/fr"
+                    overview={landingpage2klean}
+                    link="https://2-klean.fr/prenez_rendez-vous_pour_un_nettoyage"
                     action="Voir le site"
                   />
                 </SwiperSlide>
@@ -103,14 +102,6 @@ const Projets = () => {
                     action="Voir le site"
                   />
                 </SwiperSlide>
-
-                <SwiperSlide>
-                  <Card
-                    overview={koulkool}
-                    link="https://koul-kool-wsnu-2duxvxd0a-barronakns-projects.vercel.app/"
-                    action="Voir le site"
-                  />
-                </SwiperSlide>
               </Swiper>
             </div>
 
@@ -148,15 +139,15 @@ const Projets = () => {
                 </SwiperSlide>
                 <SwiperSlide>
                   <Card
-                    overview={enjoy}
-                    link="https://barronakn.github.io/Enjoy/"
+                    overview={country}
+                    link="https://monde-barronakn.vercel.app/"
                     action="Voir le site"
                   />
                 </SwiperSlide>
                 <SwiperSlide>
                   <Card
-                    overview={country}
-                    link="https://monde-barronakn.vercel.app/"
+                    overview={enjoy}
+                    link="https://barronakn.github.io/Enjoy/"
                     action="Voir le site"
                   />
                 </SwiperSlide>

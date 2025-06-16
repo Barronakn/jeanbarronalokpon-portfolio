@@ -1,7 +1,7 @@
 import React from "react";
 import person from "../../../assets/img/Barron.png";
 import { Link } from "react-router-dom";
-import cv from "../../../assets/img/Jean-Barron E. ALOKPON CV 2023.pdf";
+import cv from "../../../assets/img/Jean-Barron E. ALOKPON CV 2025.pdf";
 import Compétences from "../About/Compétences/Compétences";
 
 const About = () => {
