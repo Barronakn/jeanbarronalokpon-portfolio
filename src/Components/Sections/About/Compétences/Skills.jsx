@@ -2,6 +2,7 @@ import html from "../../../../assets/img/html.png";
 import css from "../../../../assets/img/css.png";
 import javascript from "../../../../assets/img/javascript.png";
 import react_js from "../../../../assets/img/react.png";
+import next_js from "../../../../assets/img/next.png";
 import typescript from "../../../../assets/img/typescript.png";
 import laravel from "../../../../assets/img/laravel.png";
 import tailwind from "../../../../assets/img/tailwindcss.png";
@@ -40,7 +41,7 @@ const Skills = () => {
             data-aos="fade-right"
             className="flex flex-row justify-between px-10 sm:px-0"
           >
-            <span className="text-lg">JavaScript + Reactjs + TypeScript</span>
+            <span className="text-lg">JavaScript + Reactjs + Nextjs + TypeScript</span>
             <span className="text-lg">90%</span>
           </div>
           <div className="meter">
@@ -87,6 +88,11 @@ const Skills = () => {
         <Image
           stack={react_js}
           desc_stack="icon of react_js logo"
+          classicon="icon-7"
+        />
+        <Image
+          stack={next_js}
+          desc_stack="icon of next_js logo"
           classicon="icon-7"
         />
         <Image

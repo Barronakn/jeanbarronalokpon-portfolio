@@ -47,21 +47,21 @@ const Projets = () => {
                 modules={[EffectCards]}
                 className="mySwiper shadow-2xl w-48 h-28 md:w-[400px] md:h-[200px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-3 mx-10 md:mx-20 lg:mx-32 place-items-center text-justify"
               >
-              <SwiperSlide>
+              {/* <SwiperSlide>
                 <Card
                   overview={klean}
                   link="https://2-klean.fr/"
                   action="Voir le site"
                 />
-              </SwiperSlide>
+              </SwiperSlide> */}
 
-                <SwiperSlide>
+                {/* <SwiperSlide>
                   <Card
                     overview={landingpage2klean}
                     link="https://2-klean.fr/prenez_rendez-vous_pour_un_nettoyage"
                     action="Voir le site"
                   />
-                </SwiperSlide>
+                </SwiperSlide> */}
 
                 <SwiperSlide>
                   <Card
