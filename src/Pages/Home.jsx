@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import logo from "../assets/img/logo.png";
 import portrait from "../assets/img/Barron-transparent.png";
@@ -418,9 +419,12 @@ const renderSocialIcon = (type) => {
 };
 
 const Home = () => {
+  const { lang } = useParams();
+  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [locale, setLocale] = useState("fr");
   const [projectPage, setProjectPage] = useState(0);
+  
+  const locale = (lang === 'en' || lang === 'fr') ? lang : 'fr';
 
   const t = content[locale];
   const navItems = navigation[locale];
@@ -438,7 +442,7 @@ const Home = () => {
 
       <section className="px-4 pt-6 sm:px-6 lg:px-8">
         <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-[1.9rem] bg-[#1f1f1f] px-4 py-3 text-white shadow-[0_18px_60px_rgba(15,23,42,0.12)] sm:px-6">
-          <a href="#home" className="flex items-center gap-3">
+          <a href={`/${locale}#home`} className="flex items-center gap-3">
             <img
               src={logo}
               alt="Logo Jean-Barron"
@@ -454,7 +458,7 @@ const Home = () => {
             {navItems.map((item, index) => (
               <a
                 key={item.href}
-                href={item.href}
+                href={`/${locale}${item.href}`}
                 className={`rounded-full px-6 py-3 text-[15px] transition ${
                   index === 0
                     ? "bg-[#ff8a3d] font-semibold text-white"
@@ -477,14 +481,14 @@ const Home = () => {
                       ? "bg-[#ff8a3d] text-white"
                       : "text-white/70 hover:text-white"
                   }`}
-                  onClick={() => setLocale(lang)}
+                  onClick={() => navigate(`/${lang}${window.location.hash}`)}
                 >
                   {lang}
                 </button>
               ))}
             </div>
             <a
-              href="#contact"
+              href={`/${locale}#contact`}
               className="hidden rounded-full bg-[#ff8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#f97822] sm:inline-flex"
             >
               {t.hireMe}
@@ -516,7 +520,7 @@ const Home = () => {
                       ? "bg-[#ff8a3d] text-white"
                       : "text-slate-600"
                   }`}
-                  onClick={() => setLocale(lang)}
+                  onClick={() => navigate(`/${lang}${window.location.hash}`)}
                 >
                   {lang}
                 </button>
@@ -526,7 +530,7 @@ const Home = () => {
               {navItems.map((item) => (
                 <a
                   key={item.href}
-                  href={item.href}
+                  href={`/${locale}${item.href}`}
                   className="rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-orange-50 hover:text-orange-600"
                   onClick={() => setMenuOpen(false)}
                 >
@@ -571,13 +575,13 @@ const Home = () => {
               />
               <div className="absolute bottom-6 left-1/2 z-20 flex w-[82%] -translate-x-1/2 rounded-full border border-white/50 bg-[#d76f32]/35 p-2 text-white shadow-[0_18px_60px_rgba(255,138,61,0.24)] backdrop-blur-md">
                 <a
-                  href="#portfolio"
+                  href={`/${locale}#portfolio`}
                   className="flex-1 rounded-full bg-[#ff8a3d] px-5 py-3 text-sm font-semibold transition hover:bg-[#f97822]"
                 >
                   {t.heroPrimaryCta}
                 </a>
                 <a
-                  href="#contact"
+                  href={`/${locale}#contact`}
                   className="flex-1 rounded-full px-5 py-3 text-sm font-semibold transition hover:bg-white/10"
                 >
                   {t.heroSecondaryCta}
