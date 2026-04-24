@@ -425,7 +425,7 @@ const Home = () => {
                     }`}
                     style={{
                       transform:
-                        isActive || typeof window === "undefined"
+                        isActive || typeof globalThis === "undefined"
                           ? undefined
                           : offset === -1
                             ? "translateX(-96%) scale(0.92)"
