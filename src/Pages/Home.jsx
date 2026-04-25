@@ -204,7 +204,7 @@ const Home = () => {
         </nav>
 
         {menuOpen && (
-          <div className="mx-auto mt-3 max-w-7xl rounded-[1.9rem] border border-slate-200 bg-white p-4 shadow-xl lg:hidden">
+          <div className="fixed left-4 right-4 top-[5.4rem] z-40 mx-auto max-w-6xl rounded-[1.9rem] border border-slate-200 bg-white p-4 shadow-xl sm:left-6 sm:right-6 sm:top-[6.2rem] lg:hidden">
             <div className="mb-3 flex rounded-full bg-slate-100 p-1">
               {["fr", "en"].map((lang) => (
                 <button
