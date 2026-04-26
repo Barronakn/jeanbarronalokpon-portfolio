@@ -16,10 +16,12 @@ const Home = () => {
   const { lang } = useParams();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [quickActionsOpen, setQuickActionsOpen] = useState(false);
   const [projectPage, setProjectPage] = useState(0);
-  const [serviceIndex, setServiceIndex] = useState(1);
+  const [openFaqIndex, setOpenFaqIndex] = useState(0);
   const [footerHeight, setFooterHeight] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const footerRef = useRef(null);
   
   const locale = (lang === 'en' || lang === 'fr') ? lang : 'fr';
@@ -28,21 +30,62 @@ const Home = () => {
   const navItems = navigation[locale];
   const projectsPerPage = 2;
   const pageCount = Math.ceil(t.projects.length / projectsPerPage);
+  const isExternalLink = (href) => /^https?:\/\//i.test(href);
   const currentProjects = t.projects.slice(
     projectPage * projectsPerPage,
     projectPage * projectsPerPage + projectsPerPage
   );
   const featuredProject = currentProjects[0] || t.projects[0];
-  const activeService = t.services[serviceIndex];
-  const previousServiceIndex =
-    (serviceIndex - 1 + t.services.length) % t.services.length;
-  const nextServiceIndex = (serviceIndex + 1) % t.services.length;
-  const getServiceOffset = (index) => {
-    if (index === serviceIndex) return 0;
-    if (index === previousServiceIndex) return -1;
-    if (index === nextServiceIndex) return 1;
-    return 2;
-  };
+
+  useEffect(() => {
+    const sectionIds = navigation[locale].map((item) => item.href.replace("#", ""));
+
+    const syncActiveSection = () => {
+      const scrollPosition = window.scrollY + 160;
+      const idsToTrack = ["home", ...sectionIds];
+      let currentSection = "home";
+
+      idsToTrack.forEach((id) => {
+        const element = document.getElementById(id);
+        if (!element) return;
+
+        if (scrollPosition >= element.offsetTop) {
+          currentSection = id;
+        }
+      });
+
+      setActiveSection(currentSection);
+    };
+
+    const syncFromHash = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash && ["home", ...sectionIds, "faq", "contact"].includes(hash)) {
+        setActiveSection(hash);
+        return;
+      }
+
+      syncActiveSection();
+    };
+
+    syncFromHash();
+    window.addEventListener("scroll", syncActiveSection, { passive: true });
+    window.addEventListener("hashchange", syncFromHash);
+
+    return () => {
+      window.removeEventListener("scroll", syncActiveSection);
+      window.removeEventListener("hashchange", syncFromHash);
+    };
+  }, [locale]);
+
+  useEffect(() => {
+    const closeQuickActions = () => setQuickActionsOpen(false);
+
+    window.addEventListener("scroll", closeQuickActions, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", closeQuickActions);
+    };
+  }, []);
 
   useEffect(() => {
     const updateFooterHeight = () => {
@@ -125,6 +168,22 @@ const Home = () => {
     </svg>
   );
 
+  const PlusIcon = ({ className = "h-5 w-5" }) => (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M12 5v14" />
+      <path d="M5 12h14" />
+    </svg>
+  );
+
   return (
     <>
     <main
@@ -149,15 +208,16 @@ const Home = () => {
           </a>
 
           <div className="hidden items-center gap-1 lg:flex">
-            {navItems.map((item, index) => (
+            {navItems.map((item) => (
               <a
                 key={item.href}
                 href={`/${locale}${item.href}`}
                 className={`rounded-full px-6 py-3 text-[15px] transition ${
-                  index === 0
+                  activeSection === item.href.replace("#", "")
                     ? "bg-[#ff8a3d] font-semibold text-white"
                     : "text-white/80 hover:bg-white/8 hover:text-white"
                 }`}
+                onClick={() => setActiveSection(item.href.replace("#", ""))}
               >
                 {item.label}
               </a>
@@ -181,13 +241,6 @@ const Home = () => {
                 </button>
               ))}
             </div>
-            <a
-              href={`/${locale}#contact`}
-              className="hidden items-center gap-2 rounded-full bg-[#ff8a3d] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#f97822] sm:inline-flex"
-            >
-              {t.hireMe}
-              <ArrowUpRightIcon className="h-4 w-4" />
-            </a>
             <button
               type="button"
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 lg:hidden"
@@ -226,8 +279,15 @@ const Home = () => {
                 <a
                   key={item.href}
                   href={`/${locale}${item.href}`}
-                  className="rounded-2xl px-4 py-3 text-sm font-medium text-slate-700 transition hover:bg-orange-50 hover:text-orange-600"
-                  onClick={() => setMenuOpen(false)}
+                  className={`rounded-2xl px-4 py-3 text-sm font-medium transition ${
+                    activeSection === item.href.replace("#", "")
+                      ? "bg-orange-500 text-white"
+                      : "text-slate-700 hover:bg-orange-50 hover:text-orange-600"
+                  }`}
+                  onClick={() => {
+                    setActiveSection(item.href.replace("#", ""));
+                    setMenuOpen(false);
+                  }}
                 >
                   {item.label}
                 </a>
@@ -236,6 +296,45 @@ const Home = () => {
           </div>
         )}
       </section>
+
+      <div className="fixed bottom-4 right-4 z-40 flex flex-col items-end gap-3 sm:bottom-6 sm:right-6">
+        {quickActionsOpen && (
+          <>
+            <a
+              href={`/${locale}#faq`}
+              className="group inline-flex min-w-[12.5rem] items-center justify-between gap-3 rounded-full border border-slate-200 bg-white/95 px-4 py-3 text-sm font-semibold text-slate-800 shadow-[0_16px_40px_rgba(15,23,42,0.14)] backdrop-blur-md transition hover:border-[#ff8a3d] hover:text-[#ff8a3d] sm:px-5"
+              onClick={() => setQuickActionsOpen(false)}
+            >
+              FAQ
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#fff3e9] text-[#ff8a3d] transition group-hover:bg-[#ff8a3d] group-hover:text-white">
+                <ArrowUpRightIcon className="h-4 w-4" />
+              </span>
+            </a>
+            <a
+              href={`/${locale}#contact`}
+              className="group inline-flex min-w-[12.5rem] items-center justify-between gap-3 rounded-full bg-[#1f1f1f] px-4 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(15,23,42,0.2)] transition hover:bg-[#ff8a3d] sm:px-5"
+              onClick={() => setQuickActionsOpen(false)}
+            >
+              {t.hireMe}
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/12 text-white">
+                <ArrowUpRightIcon className="h-4 w-4" />
+              </span>
+            </a>
+          </>
+        )}
+
+        <button
+          type="button"
+          className={`inline-flex h-14 w-14 items-center justify-center rounded-full text-white shadow-[0_18px_45px_rgba(15,23,42,0.22)] transition ${
+            quickActionsOpen ? "rotate-45 bg-[#1f1f1f]" : "bg-[#ff8a3d] hover:bg-[#f97822]"
+          }`}
+          aria-label={quickActionsOpen ? "Fermer les raccourcis" : "Ouvrir les raccourcis"}
+          aria-expanded={quickActionsOpen}
+          onClick={() => setQuickActionsOpen((open) => !open)}
+        >
+          <PlusIcon className="h-6 w-6" />
+        </button>
+      </div>
 
       <div className="h-[5.9rem] sm:h-[6.9rem]" />
 
@@ -283,7 +382,7 @@ const Home = () => {
                     </span>
                   </a>
                   <a
-                    href={`/${locale}#contact`}
+                    href="mailto:jeanbarronalokpon@gmail.com"
                     className="flex-1 rounded-full px-4 py-3 text-sm font-semibold transition hover:bg-white/10 sm:px-5"
                   >
                     {t.heroSecondaryCta}
@@ -368,7 +467,7 @@ const Home = () => {
               ))}
             </div>
 
-            <div className="mt-8 sm:mt-10">
+            <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row sm:flex-wrap sm:items-center">
               <a
                 href={cv}
                 target="_blank"
@@ -376,6 +475,12 @@ const Home = () => {
                 className="inline-flex rounded-[1.5rem] border border-slate-400 px-7 py-4 text-base font-semibold text-slate-900 transition hover:border-[#ff8a3d] hover:text-[#ff8a3d] sm:rounded-[1.8rem] sm:px-10 sm:py-5 sm:text-xl"
               >
                 {t.aboutButton}
+              </a>
+              <a
+                href="mailto:jeanbarronalokpon@gmail.com"
+                className="inline-flex items-center justify-center rounded-[1.5rem] bg-[#ff8a3d] px-7 py-4 text-base font-semibold text-white transition hover:bg-[#f97822] sm:rounded-[1.8rem] sm:px-10 sm:py-5 sm:text-xl"
+              >
+                {t.hireMe}
               </a>
             </div>
           </div>
@@ -405,111 +510,35 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="mt-10 sm:mt-14">
-            <div className="relative mx-auto flex min-h-[31rem] max-w-6xl items-center justify-center sm:min-h-[35rem] lg:min-h-[31rem]">
-              {t.services.map((service, index) => {
-                const offset = getServiceOffset(index);
-                const isActive = offset === 0;
-
-                return (
-                  <article
-                    key={service.title}
-                    className={`glass-card group absolute w-full max-w-[16.8rem] overflow-hidden rounded-[2rem] border border-white/40 transition duration-500 sm:max-w-[20rem] sm:rounded-[2.2rem] lg:max-w-[19rem] ${
-                      isActive
-                        ? "z-30 scale-100 opacity-100"
-                        : offset === -1
-                          ? "z-20 hidden scale-[0.92] opacity-75 lg:block lg:-translate-x-[96%]"
-                          : offset === 1
-                            ? "z-20 hidden scale-[0.92] opacity-75 lg:block lg:translate-x-[96%]"
-                            : "pointer-events-none hidden opacity-0"
-                    }`}
-                    style={{
-                      transform:
-                        isActive || typeof globalThis === "undefined"
-                          ? undefined
-                          : offset === -1
-                            ? "translateX(-96%) scale(0.92)"
-                            : offset === 1
-                              ? "translateX(96%) scale(0.92)"
-                              : "scale(0.8)",
-                    }}
-                  >
-                    <div className="border-b border-white/20 px-5 py-5 sm:px-7 sm:py-6">
-                      <h3 className="font-display text-[1.45rem] font-bold tracking-[-0.045em] text-white sm:text-[1.9rem]">
-                        {service.title}
-                      </h3>
-                    </div>
-
-                    <div className="relative px-4 pb-4 pt-8 sm:px-5 sm:pb-5 sm:pt-9">
-                      <div className="absolute left-1/2 top-6 h-6 w-[82%] -translate-x-1/2 rounded-[999px] bg-white/18" />
-                      <div className="absolute left-1/2 top-9 h-7 w-[88%] -translate-x-1/2 rounded-[999px] bg-white/28" />
-                      <div className="relative rounded-[2rem] bg-[#f8f4ef] p-3 shadow-[0_25px_60px_rgba(0,0,0,0.28)]">
-                        <div className="overflow-hidden rounded-[1.65rem] bg-white">
-                          <img
-                            src={service.image}
-                            alt={service.title}
-                            className="h-[10rem] w-full object-cover object-top sm:h-[13rem]"
-                          />
-                        </div>
-                        <a
-                          href={service.link}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="absolute bottom-0 right-0 inline-flex h-16 w-16 translate-x-1 translate-y-2 items-center justify-center rounded-full bg-[#192742] text-[2rem] font-light text-white transition hover:bg-[#ff8a3d] sm:h-20 sm:w-20 sm:translate-x-2 sm:translate-y-3 sm:text-[2.6rem]"
-                          aria-label={service.title}
-                        >
-                          <ArrowUpRightIcon className="h-8 w-8 sm:h-10 sm:w-10" />
-                        </a>
-                      </div>
-
-                      <p className="mt-4 max-w-[85%] text-sm leading-6 text-white/72 sm:mt-5 sm:leading-7">
-                        {service.description}
-                      </p>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-
-            <div className="mt-5 flex items-center justify-center gap-4">
-              <button
-                type="button"
-                onClick={() => setServiceIndex(previousServiceIndex)}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/8 text-2xl text-white transition hover:border-[#ff8a3d] hover:text-[#ff8a3d]"
-                aria-label="Previous service"
+          <div className="mt-10 grid gap-5 sm:mt-14 md:grid-cols-2 xl:grid-cols-4">
+            {t.services.map((service, index) => (
+              <article
+                key={service.title}
+                className="glass-card group flex min-h-[18rem] flex-col justify-between rounded-[1.8rem] border border-white/15 bg-white/6 p-6 shadow-[0_20px_55px_rgba(0,0,0,0.16)] backdrop-blur-sm sm:rounded-[2rem] sm:p-7"
               >
-                <ArrowLeftIcon className="h-5 w-5" />
-              </button>
+                <div>
+                  <span className="inline-flex rounded-full border border-white/15 bg-white/8 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/60">
+                    0{index + 1}
+                  </span>
+                  <h3 className="mt-5 font-display text-[1.45rem] font-bold leading-[1.05] tracking-[-0.045em] text-white sm:text-[1.75rem]">
+                    {service.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-white/72 sm:text-[0.98rem]">
+                    {service.description}
+                  </p>
+                </div>
 
-              <div className="flex items-center gap-3">
-                {t.services.map((service, index) => (
-                  <button
-                    key={service.title}
-                    type="button"
-                    onClick={() => setServiceIndex(index)}
-                    className={`h-3 rounded-full transition ${
-                      serviceIndex === index
-                        ? "w-10 bg-[#ff8a3d]"
-                        : "w-3 bg-white/60 hover:bg-white"
-                    }`}
-                    aria-label={service.title}
-                  />
-                ))}
-              </div>
-
-              <button
-                type="button"
-                onClick={() => setServiceIndex(nextServiceIndex)}
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-white/8 text-2xl text-white transition hover:border-[#ff8a3d] hover:text-[#ff8a3d]"
-                aria-label="Next service"
-              >
-                <ArrowRightIcon className="h-5 w-5" />
-              </button>
-            </div>
-
-            <div className="mt-6 text-center text-sm text-white/55">
-              {activeService.title}
-            </div>
+                <a
+                  href={service.link}
+                  target={isExternalLink(service.link) ? "_blank" : undefined}
+                  rel={isExternalLink(service.link) ? "noreferrer" : undefined}
+                  className="mt-8 inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/8 px-4 py-3 text-sm font-semibold text-white transition hover:border-[#ff8a3d] hover:bg-[#ff8a3d] hover:text-white"
+                >
+                  {service.title}
+                  <ArrowUpRightIcon className="h-4 w-4" />
+                </a>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -528,8 +557,8 @@ const Home = () => {
               <article key={project.title} className="group">
                 <a
                   href={project.link}
-                  target="_blank"
-                  rel="noreferrer"
+                  target={isExternalLink(project.link) ? "_blank" : undefined}
+                  rel={isExternalLink(project.link) ? "noreferrer" : undefined}
                   className="relative block overflow-hidden rounded-[1.6rem] bg-[#eef1f5] p-3 shadow-[0_16px_40px_rgba(15,23,42,0.06)] sm:rounded-[2rem] sm:p-4"
                 >
                   <img
@@ -540,7 +569,7 @@ const Home = () => {
                   <span className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#ff8a3d] bg-white/90 text-2xl text-[#ff8a3d] sm:right-7 sm:top-7 sm:h-14 sm:w-14 sm:text-3xl">
                     <ArrowUpRightIcon className="h-5 w-5 sm:h-7 sm:w-7" />
                   </span>
-                  <span className="absolute bottom-5 left-5 font-display text-[2rem] font-bold tracking-[-0.05em] text-white sm:bottom-6 sm:left-6 sm:text-[2.8rem]">
+                  <span className="absolute bottom-5 left-5 rounded-full bg-gray-200 px-4 py-2 font-display text-[1.2rem] font-bold tracking-[-0.05em] text-black sm:bottom-6 sm:left-6 sm:px-5 sm:py-2.5 sm:text-[1.4rem]">
                     {project.shortTitle}
                   </span>
                 </a>
@@ -599,8 +628,8 @@ const Home = () => {
             </p>
             <a
               href={featuredProject.link}
-              target="_blank"
-              rel="noreferrer"
+              target={isExternalLink(featuredProject.link) ? "_blank" : undefined}
+              rel={isExternalLink(featuredProject.link) ? "noreferrer" : undefined}
               className="inline-flex flex-wrap items-center justify-center gap-3 font-display text-[1.45rem] font-bold leading-[1.08] tracking-[-0.05em] text-[#34425d] sm:gap-4 sm:text-[2.1rem] lg:text-[2.55rem]"
             >
               {featuredProject.title}
@@ -611,6 +640,11 @@ const Home = () => {
             <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
               {featuredProject.description}
             </p>
+            {!isExternalLink(featuredProject.link) && (
+              <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-[#ff8a3d]">
+                {t.projectFallbackLabel}
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -735,6 +769,77 @@ const Home = () => {
         </div>
       </section>
 
+      <section id="faq" className="px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+        <div className="mx-auto max-w-6xl rounded-[2.2rem] bg-[#edf1f7] p-6 sm:rounded-[2.8rem] sm:p-8 lg:p-12">
+          <div className="mx-auto max-w-4xl">
+            <div className="text-center">
+              <h2 className="font-display text-[1.9rem] font-extrabold leading-[1.06] tracking-[-0.05em] text-[#34425d] sm:text-[2.4rem] lg:text-[3.1rem]">
+                {t.faqTitlePrefix}{" "}
+                <span className="text-[#ff8a3d]">{t.faqTitleAccent}</span>
+              </h2>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-500 sm:text-lg sm:leading-8">
+                {t.faqText}
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-4">
+              {t.faqItems.map((item, index) => {
+                const isOpen = openFaqIndex === index;
+
+                return (
+                  <article
+                    key={item.question}
+                    className="overflow-hidden rounded-[1.6rem] bg-white shadow-[0_12px_35px_rgba(15,23,42,0.06)] sm:rounded-[1.9rem]"
+                  >
+                    <button
+                      type="button"
+                      className="flex w-full items-center justify-between gap-4 px-5 py-5 text-left sm:px-6 sm:py-6"
+                      onClick={() =>
+                        setOpenFaqIndex((currentIndex) =>
+                          currentIndex === index ? -1 : index
+                        )
+                      }
+                      aria-expanded={isOpen}
+                    >
+                      <h3 className="font-display text-[1.2rem] font-bold leading-[1.15] tracking-[-0.04em] text-[#34425d] sm:text-[1.45rem]">
+                        {item.question}
+                      </h3>
+                      <span
+                        className={`inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#fff3e9] text-[#ff8a3d] transition ${
+                          isOpen ? "rotate-45" : "rotate-0"
+                        }`}
+                        aria-hidden="true"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="h-5 w-5"
+                        >
+                          <path d="M12 5v14" />
+                          <path d="M5 12h14" />
+                        </svg>
+                      </span>
+                    </button>
+
+                    {isOpen && (
+                      <div className="border-t border-slate-100 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+                        <p className="text-[0.98rem] leading-7 text-slate-500 sm:text-base sm:leading-8">
+                          {item.answer}
+                        </p>
+                      </div>
+                    )}
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="overflow-hidden px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-7xl text-center">
           <h2 className="font-display text-[1.9rem] font-extrabold leading-[1.06] tracking-[-0.05em] text-[#34425d] sm:text-[2.4rem] lg:text-[3.1rem]">
@@ -853,7 +958,7 @@ const Home = () => {
               </h3>
               <div className="mt-5 grid gap-3 text-white/75">
                 {navItems.map((item) => (
-                  <a key={item.href} href={item.href} className="hover:text-white">
+                  <a key={item.href} href={`/${locale}${item.href}`} className="hover:text-white">
                     {item.label}
                   </a>
                 ))}

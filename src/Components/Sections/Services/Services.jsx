@@ -25,31 +25,31 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-3 mx-10 md:mx-20 lg:mx-32 place-items-center text-justify">
           <Card
             overview={vitrine}
-            link="https://comeup.com/fr/service/444767/creer-votre-site-web-vitrine-sur-mesure"
+            link="https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure"
             action="Voir plus"
           />
 
           <Card
             overview={boutique}
-            link="https://comeup.com/fr/service/444773/creer-votre-site-e-commerce-professionnel"
+            link="https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure"
             action="Voir plus"
           />
 
           <Card
             overview={landing}
-            link="https://comeup.com/fr/service/436678/creer-votre-landing-page-professionnel-et-sur-mesure"
+            link="https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure"
             action="Voir plus"
           />
 
           <Card
             overview={blog}
-            link="https://comeup.com/fr/service/436653/creer-votre-blog-professionnel-ou-personnel"
+            link="https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure"
             action="Voir plus"
           />
 
           <Card
             overview={refonte}
-            link="https://comeup.com/fr/service/436716/faire-la-refonte-de-votre-site-optimiser-le-design-et-le-seo"
+            link="https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure"
             action="Voir plus"
           />
         </div>
