@@ -216,7 +216,7 @@ export const content = {
     aboutButton: "Voir mon CV",
     metrics: [
       { value: "12+", label: "Projets livres" },
-      { value: "04", label: "Annees a coder pour le web" },
+      { value: "04", label: "Années a coder pour le web" },
     ],
     servicesTitlePrefix: "Mes",
     servicesTitleAccent: "services",
@@ -259,22 +259,22 @@ export const content = {
     experienceTitleAccent: "parcours",
     experiences: [
       {
-        period: "2025 - Aujourd'hui",
-        company: "Freelance, Benin",
+        period: "2023 - Aujourd'hui",
+        company: "Freelance",
         role: "Developpeur web front-end",
         text: "Creation de portfolios, landing pages et sites vitrines sur mesure avec un focus sur l'experience et la lisibilite.",
       },
       {
-        period: "2024 - Aujourd'hui",
-        company: "Projets clients & personnels",
-        role: "Integration web pixel perfect",
-        text: "Integration d'interfaces modernes, attention portee a la fidelite visuelle, a la clarte des parcours et a l'experience utilisateur.",
+        period: "2023 - 2026",
+        company: "ESM-Bénin | Licence",
+        role: "SIL",
+        text: "Formation en Systèmes Informatiques et Logiciels(SIL). Conception de systèmes informatiques et bases de données.",
       },
       {
         period: "2023 - 2024",
         company: "Autoformation intensive",
         role: "Developpeur front-end",
-        text: "Montee en competence continue sur React, Next.js, Tailwind CSS, PHP et Laravel avec des projets concrets.",
+        text: "Montee en competence continue sur React, Next.js, TypeScript, Tailwind CSS et Laravel avec des projets concrets.",
       },
     ],
     testimonialsTitleTop: "Des temoignages qui",
