@@ -271,6 +271,12 @@ export const content = {
         text: "Formation en Systèmes Informatiques et Logiciels(SIL). Conception de systèmes informatiques et bases de données.",
       },
       {
+        period: "Juil. 2025 - En cours",
+        company: "Soft Vodooz",
+        role: "Développeur Web Frontend",
+        text: "Développement d'applications web modernes avec Next.js, Shadcn, TypeScript, Tailwind CSS, TanStack et maintenance.",
+      },
+      {
         period: "2023 - 2024",
         company: "Autoformation intensive",
         role: "Developpeur front-end",
@@ -414,16 +420,22 @@ export const content = {
     experienceTitleAccent: "journey",
     experiences: [
       {
-        period: "2025 - Present",
+        period: "2023 - Present",
         company: "Freelance, Benin",
         role: "Front-end web developer",
         text: "Building custom portfolios, landing pages, and showcase websites with a strong focus on clarity and experience.",
       },
       {
-        period: "2024 - Present",
-        company: "Client & personal projects",
-        role: "Pixel-perfect web integration",
-        text: "Delivering modern interfaces with careful attention to visual fidelity, user flows, and overall experience.",
+        period: "2023 - 2026",
+        company: "ESM-Benin | Bachelor's",
+        role: "Computer Systems and Software",
+        text: "Training in Computer Systems and Software — system design and database concepts.",
+      },
+      {
+        period: "Jul. 2025 - Present",
+        company: "Soft Vodooz",
+        role: "Frontend Web Developer",
+        text: "Building modern web applications with Next.js, Shadcn, TypeScript, Tailwind CSS, TanStack, and maintenance.",
       },
       {
         period: "2023 - 2024",
