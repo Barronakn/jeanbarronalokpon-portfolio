@@ -1,3 +1,8 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Allow: /
+
+# Bloquer les routes d'application internes sans intérêt SEO (le reste est une SPA)
+Disallow: /static/
+
+Sitemap: https://jeanbarronalokpon-portfolio.vercel.app/sitemap.xml

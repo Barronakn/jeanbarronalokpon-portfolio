@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react";
 import logo from "../assets/img/logo.png";
-import portrait from "../assets/img/Barron-transparent.png";
+import portrait from "../assets/img/Barron-transparent.webp";
 import cv from "../assets/img/Jean-Barron E. ALOKPON CV 2025.pdf";
 import {
   content,
@@ -11,6 +11,7 @@ import {
   renderSocialIcon,
   socials,
 } from "../data/homeContent";
+import { applySeo } from "../data/seo";
 
 const Home = () => {
   const { lang } = useParams();
@@ -36,6 +37,11 @@ const Home = () => {
     projectPage * projectsPerPage + projectsPerPage
   );
   const featuredProject = currentProjects[0] || t.projects[0];
+
+  // SEO : title, meta description, canonical, hreflang et données structurées par langue
+  useEffect(() => {
+    applySeo(locale, t);
+  }, [locale, t]);
 
   useEffect(() => {
     const sectionIds = navigation[locale].map((item) => item.href.replace("#", ""));
@@ -198,7 +204,7 @@ const Home = () => {
           <a href={`/${locale}#home`} className="flex items-center gap-3">
             <img
               src={logo}
-              alt="Logo Jean-Barron"
+              alt={t.logoAlt}
               className="h-10 w-10 rounded-full bg-white/10 p-1 sm:h-11 sm:w-11"
             />
             <div>
@@ -368,7 +374,12 @@ const Home = () => {
                 <div className="absolute inset-x-0 bottom-0 h-[70%] rounded-t-[999px] bg-[#ffb97a]" />
                 <img
                   src={portrait}
-                  alt="Jean-Barron portrait"
+                  alt={t.heroPortraitAlt}
+                  width="470"
+                  height="530"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async"
                   className="relative z-10 max-h-[360px] object-contain drop-shadow-[0_24px_80px_rgba(15,23,42,0.16)] sm:max-h-[430px] lg:max-h-[520px]"
                 />
                 <div className="absolute bottom-4 left-1/2 z-20 flex w-[92%] -translate-x-1/2 flex-col rounded-[1.8rem] border border-white/50 bg-[#d76f32]/35 p-2 text-white shadow-[0_18px_60px_rgba(255,138,61,0.24)] backdrop-blur-md sm:bottom-6 sm:w-[82%] sm:flex-row sm:rounded-full">
@@ -440,7 +451,11 @@ const Home = () => {
             <div className="absolute bottom-8 h-[68%] w-[62%] rounded-[3rem] bg-[#ffb97a]" />
             <img
               src={portrait}
-              alt="Jean-Barron"
+              alt={t.aboutPortraitAlt}
+              width="470"
+              height="530"
+              loading="lazy"
+              decoding="async"
               className="relative z-10 max-h-[360px] object-contain drop-shadow-[0_20px_70px_rgba(15,23,42,0.14)] sm:max-h-[460px] lg:max-h-[520px]"
             />
           </div>
@@ -455,6 +470,22 @@ const Home = () => {
             <p className="mt-5 max-w-xl text-base leading-7 text-slate-500 sm:mt-6 sm:text-lg sm:leading-8">
               {t.aboutText}
             </p>
+
+            <div className="mt-8">
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-400">
+                {t.stackLabel}
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {t.mainStack.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
 
             <div className="mt-8 grid gap-6 sm:mt-10 sm:grid-cols-2">
               {t.metrics.map((metric) => (
@@ -528,15 +559,23 @@ const Home = () => {
                   </p>
                 </div>
 
-                <a
-                  href={service.link}
-                  target={isExternalLink(service.link) ? "_blank" : undefined}
-                  rel={isExternalLink(service.link) ? "noreferrer" : undefined}
-                  className="mt-8 inline-flex items-center gap-2 self-start rounded-full border border-white/15 bg-white/8 px-4 py-3 text-sm font-semibold text-white transition hover:border-[#ff8a3d] hover:bg-[#ff8a3d] hover:text-white"
-                >
-                  {service.title}
-                  <ArrowUpRightIcon className="h-4 w-4" />
-                </a>
+                <div className="mt-8 flex flex-wrap items-center gap-3">
+                  <a
+                    href={service.link}
+                    target={isExternalLink(service.link) ? "_blank" : undefined}
+                    rel={isExternalLink(service.link) ? "noreferrer" : undefined}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-3 text-sm font-semibold text-white transition hover:border-[#ff8a3d] hover:bg-[#ff8a3d] hover:text-white"
+                  >
+                    {t.serviceCta}
+                    <ArrowUpRightIcon className="h-4 w-4" />
+                  </a>
+                  <a
+                    href={`/${locale}#contact`}
+                    className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-3 text-sm font-semibold text-white/80 transition hover:border-[#ff8a3d] hover:text-[#ff8a3d]"
+                  >
+                    {t.serviceInternalCta}
+                  </a>
+                </div>
               </article>
             ))}
           </div>
@@ -563,7 +602,11 @@ const Home = () => {
                 >
                   <img
                     src={project.image}
-                    alt={project.title}
+                    alt={`${project.title} — ${t.projectImageAlt}`}
+                    width="1366"
+                    height="768"
+                    loading="lazy"
+                    decoding="async"
                     className="h-[15rem] w-full rounded-[1.2rem] object-cover transition duration-500 group-hover:scale-[1.02] sm:h-[20rem] sm:rounded-[1.6rem]"
                   />
                   <span className="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#ff8a3d] bg-white/90 text-2xl text-[#ff8a3d] sm:right-7 sm:top-7 sm:h-14 sm:w-14 sm:text-3xl">
@@ -927,7 +970,7 @@ const Home = () => {
               <div className="flex items-center gap-3">
                 <img
                   src={logo}
-                  alt="Logo Jean-Barron"
+                  alt={t.logoAlt}
                   className="h-10 w-10 rounded-full bg-white/10 p-1 sm:h-11 sm:w-11"
                 />
                 <span className="font-display text-[1.7rem] font-bold sm:text-3xl">JBCREA</span>

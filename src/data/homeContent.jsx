@@ -21,15 +21,15 @@ const projectMeta = {
       title: "Ballamas",
       shortTitle: "Ballamas",
       description:
-        "Un exercice Figma to code avec une attention particuliere portee a la fidelite et au rythme visuel.",
-      tags: ["Figma to Code", "Responsive", "Visual Design"],
+        "Un exercice d'intégration Figma vers code avec une attention particulière portée à la fidélité visuelle, au rythme et au rendu responsive de l'interface.",
+      tags: ["Intégration Figma", "Interface responsive", "Design visuel"],
     },
     en: {
       title: "Ballamas",
       shortTitle: "Ballamas",
       description:
         "A Figma-to-code build focused on visual fidelity, rhythm, and responsive execution.",
-      tags: ["Figma to Code", "Responsive", "Visual Design"],
+      tags: ["Figma to Code", "Responsive UI", "Visual Design"],
     },
     link: "https://figma-to-code-ed2-week-two.vercel.app/",
   },
@@ -38,15 +38,15 @@ const projectMeta = {
       title: "Site vitrine sur mesure",
       shortTitle: "Cargo",
       description:
-        "Un travail oriente presentation de marque, hierarchie de contenu et clarte commerciale.",
-      tags: ["Branding", "Site vitrine", "Conversion"],
+        "Un travail orienté présentation de marque, hiérarchie de contenu et clarté commerciale, avec une interface web responsive.",
+      tags: ["Site vitrine", "Branding", "Conversion"],
     },
     en: {
       title: "Custom Showcase Website",
       shortTitle: "Cargo",
       description:
-        "A brand-focused project centered on clearer hierarchy and a stronger commercial presentation.",
-      tags: ["Branding", "Showcase", "Conversion"],
+        "A brand-focused project centered on clearer hierarchy, a stronger commercial presentation, and a responsive interface.",
+      tags: ["Showcase", "Branding", "Conversion"],
     },
     link: "https://grhtlgroup.com/",
   },
@@ -55,42 +55,76 @@ const projectMeta = {
       title: "Carte MonGo Patrimoine",
       shortTitle: "MonGo",
       description:
-        "Un projet oriente produit avec une structure visuelle lisible et une navigation fonctionnelle.",
-      tags: ["Dashboard", "Cards", "UI System"],
+        "Un projet orienté produit avec une structure visuelle lisible, une navigation fonctionnelle et une interface responsive.",
+      tags: ["Dashboard", "Interface", "UI System"],
     },
     en: {
       title: "MonGo Patrimoine Card",
       shortTitle: "MonGo",
       description:
-        "A product-oriented project built around clear visual structure and functional navigation.",
-      tags: ["Dashboard", "Cards", "UI System"],
+        "A product-oriented project built around clear visual structure, functional navigation, and a responsive interface.",
+      tags: ["Dashboard", "UI", "UI System"],
     },
     link: "https://carte.mongopatrimoine.com/",
   },
-  "project-fylla": {
+  "project-fruity": {
     fr: {
-      title: "Fylla",
-      shortTitle: "Fylla",
+      title: "Fruity — Cidre de fruits naturel",
+      shortTitle: "Fruity",
       description:
-        "Une interface moderne avec une presentation plus immersive et une direction visuelle plus affirmée.",
-      tags: ["Product UI", "Modern Layout", "Responsive"],
+        "Une landing page produit pour Fruity, un cidre de fruits 100% naturel disponible en canettes de 330 ml (Exotic Mix, Sweet Apple, Green Pear).",
+      tags: ["Landing page", "Produit", "Branding"],
     },
     en: {
-      title: "Fylla",
-      shortTitle: "Fylla",
+      title: "Fruity — Natural Fruit Cider",
+      shortTitle: "Fruity",
       description:
-        "A modern interface with a more immersive presentation and a stronger visual direction.",
-      tags: ["Product UI", "Modern Layout", "Responsive"],
+        "A product landing page for Fruity, a 100% natural fruit cider available in 330 ml cans (Exotic Mix, Sweet Apple, Green Pear).",
+      tags: ["Landing Page", "Product", "Branding"],
     },
-    link: "https://fylla-1.vercel.app/",
+    link: "https://fruity-liard.vercel.app/",
+  },
+  "project-hemolife": {
+    fr: {
+      title: "HemoLife Bénin — Don de sang",
+      shortTitle: "HemoLife",
+      description:
+        "Un site d'information sur le don de sang au Bénin : éligibilité, centres de don, préparation et FAQ. Un geste simple qui sauve des vies.",
+      tags: ["Site d'information", "Local", "UX"],
+    },
+    en: {
+      title: "HemoLife Benin — Blood Donation",
+      shortTitle: "HemoLife",
+      description:
+        "An informational website about blood donation in Benin: eligibility, donation centers, preparation, and FAQ.",
+      tags: ["Informational site", "Local", "UX"],
+    },
+    link: "https://hemo-life-mocha.vercel.app/",
+  },
+  "project-jas": {
+    fr: {
+      title: "JA Sphere — Produits frais d'élevage",
+      shortTitle: "JA Sphere",
+      description:
+        "Un site vitrine pour JA Sphere, entreprise basée à Abomey-Calavi (Bénin) spécialisée dans les produits frais d'élevage : tilapia, poulets, cailles et escargots.",
+      tags: ["Site vitrine", "Local", "Branding"],
+    },
+    en: {
+      title: "JA Sphere — Fresh Farm Products",
+      shortTitle: "JA Sphere",
+      description:
+        "A showcase website for JA Sphere, a company based in Abomey-Calavi (Benin) specializing in fresh farm products: tilapia, chicken, quail, and snails.",
+      tags: ["Showcase", "Local", "Branding"],
+    },
+    link: "https://ja-sphere.com/",
   },
   "project-nft": {
     fr: {
       title: "NFT Landing",
       shortTitle: "NFT",
       description:
-        "Une landing page experimentee pour travailler l'impact visuel, les contrastes et le storytelling produit.",
-      tags: ["Landing Page", "Storytelling", "UI"],
+        "Une landing page expérimentale pour travailler l'impact visuel, les contrastes et le storytelling produit.",
+      tags: ["Landing page", "Storytelling", "UI"],
     },
     en: {
       title: "NFT Landing",
@@ -101,37 +135,37 @@ const projectMeta = {
     },
     link: "https://figma-to-code-ed2-week-one.vercel.app/s",
   },
-  "project-tokena": {
+  "project-utt": {
     fr: {
-      title: "Tokena - Solution de livraison",
-      shortTitle: "Tokena",
+      title: "UTT — Agence web Upper Thrill Tech",
+      shortTitle: "UTT",
       description:
-        "Une interface produit pensee pour presenter clairement une experience moderne et engageante.",
-      tags: ["Landing Page", "App Web", "Animation", "Site Vitrine"],
+        "Le site de mon agence web Upper Thrill Tech : création de sites internet et d'applications web sur mesure pour les entreprises au Bénin.",
+      tags: ["Site vitrine", "Agence web", "Branding"],
     },
     en: {
-      title: "Tokena - Delivery Solution",
-      shortTitle: "Tokena",
+      title: "UTT — Upper Thrill Tech Web Agency",
+      shortTitle: "UTT",
       description:
-        "A product interface designed to clearly present a modern and engaging experience.",
-      tags: ["Landing Page", "Web App", "Animation", "Showcase"],
+        "The website of my web agency Upper Thrill Tech: custom websites and web applications for businesses in Benin.",
+      tags: ["Showcase", "Web Agency", "Branding"],
     },
-    link: "https://figma-to-code-ed2-week-three.vercel.app/dashboard",
+    link: "https://upperthrilltech.com/",
   },
   "project-wapkon-benin": {
     fr: {
       title: "Wapkon Benin",
       shortTitle: "Wapkon Benin",
       description:
-        "Un projet de presentation web plus institutionnel, pense pour inspirer confiance et clarifier l'offre.",
-      tags: ["Institutional", "Corporate", "Clarity"],
+        "Un projet web institutionnel pensé pour inspirer confiance et clarifier l'offre, avec une interface responsive et soignée.",
+      tags: ["Site institutionnel", "Corporate", "Interface"],
     },
     en: {
       title: "Wapkon Benin",
       shortTitle: "Wapkon Benin",
       description:
-        "A more institutional web project designed to inspire trust and communicate the offer clearly.",
-      tags: ["Institutional", "Corporate", "Clarity"],
+        "A more institutional web project designed to inspire trust, communicate the offer clearly, and adapt to every screen.",
+      tags: ["Institutional", "Corporate", "UI"],
     },
     link: "https://mvp-webcraft-01.vercel.app/",
   },
@@ -143,13 +177,15 @@ const buildProjects = (locale) =>
       fr: {
         title: key.replace("project-", ""),
         shortTitle: key.replace("project-", ""),
-        description: "Un projet realise avec une attention particuliere portee a l'experience et au rendu final.",
+        description:
+          "Un projet réalisé avec une attention particulière portée à l'expérience utilisateur et au rendu final.",
         tags: ["Web Design", "Responsive"],
       },
       en: {
         title: key.replace("project-", ""),
         shortTitle: key.replace("project-", ""),
-        description: "A project crafted with careful attention to experience and final presentation.",
+        description:
+          "A project crafted with careful attention to user experience and final presentation.",
         tags: ["Web Design", "Responsive"],
       },
       link: "#contact",
@@ -196,59 +232,70 @@ export const socials = [
 
 export const content = {
   fr: {
-    brandRole: "Developpeur web",
+    seoTitle: "Frontend Developer au Bénin | Jean-Barron ALOKPON",
+    seoDescription:
+      "Jean-Barron ALOKPON (BarronDev), Frontend Developer au Bénin. Je conçois et développe des interfaces web modernes, performantes et responsives avec React, Next.js, TypeScript, JavaScript et Tailwind CSS. Sites vitrines, applications web, dashboards et landing pages sur mesure.",
+    brandRole: "Frontend Developer",
+    logoAlt: "Logo BarronDev — Jean-Barron ALOKPON, Frontend Developer",
+    heroPortraitAlt: "Jean-Barron ALOKPON, Frontend Developer au Bénin",
+    aboutPortraitAlt: "Portrait de Jean-Barron ALOKPON, développeur frontend à Cotonou, Bénin",
+    projectImageAlt: "interface web responsive",
+    stackLabel: "Technologies principales",
+    serviceCta: "Voir l'offre",
+    serviceInternalCta: "Discuter de votre projet",
     hireMe: "Me contacter",
     hello: "Bonjour !",
     heroLead:
-      "Je concois des interfaces elegantes et je developpe des sites web modernes avec une vraie attention au rendu final.",
+      "Je conçois des interfaces web modernes et performantes et je développe des sites sur mesure avec React, Next.js et TypeScript — avec une vraie attention au rendu final.",
     heroTitlePrefix: "Je suis",
     heroTitleName: "Jean-Barron",
-    heroTitleSuffix: "developpeur web",
+    heroTitleSuffix: "Frontend Developer",
     heroPrimaryCta: "Voir le portfolio",
     heroSecondaryCta: "Me contacter",
-    heroExperience: "Annees d'experience",
-    aboutDate: "Avr 2026",
+    heroExperience: "Années d'expérience",
+    aboutDate: "Frontend Developer · Cotonou, Bénin",
     aboutTitlePrefix: "Pourquoi",
     aboutTitleAccent: "m'engager",
     aboutTitleSuffix: "?",
     aboutText:
-      "Je transforme une idee ou un site existant en une interface plus nette, plus premium et plus coherente. Mon travail melange design visuel, structure produit et integration front-end propre.",
+      "Je suis Jean-Barron ALOKPON (BarronDev), Frontend Developer basé à Cotonou, au Bénin. Je conçois et développe des interfaces web modernes, performantes et responsives avec React, Next.js, TypeScript, JavaScript et Tailwind CSS. Mon travail combine design visuel, architecture de composants et intégration frontend propre — pour les entreprises, startups et entrepreneurs d'Afrique francophone et d'ailleurs.",
     aboutButton: "Voir mon CV",
     metrics: [
-      { value: "12+", label: "Projets livres" },
-      { value: "04", label: "Années a coder pour le web" },
+      { value: "12+", label: "Projets livrés" },
+      { value: "04", label: "Années à coder pour le web" },
     ],
+    mainStack: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
     servicesTitlePrefix: "Mes",
     servicesTitleAccent: "services",
     servicesText:
-      "Quatre formats clairs pour lancer, presenter ou vendre un produit avec une execution propre et un rendu professionnel.",
+      "Quatre formats clairs pour lancer, présenter ou vendre un produit, avec une exécution frontend propre, un rendu professionnel et des interfaces pensées pour la conversion.",
     services: [
       {
-        title: "Application web ou mobile",
+        title: "Développement d'applications web",
         description:
-          "Pour un espace client, un outil interne ou un produit digital avec une interface claire, fluide et pensee pour l'usage.",
+          "Pour un espace client, un outil interne ou un produit digital : une application web avec une interface claire, fluide et pensée pour l'usage réel.",
         link: "https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure",
       },
       {
-        title: "Site vitrine",
+        title: "Sites vitrines modernes",
         description:
-          "Pour presenter ton activite, rassurer tes visiteurs et poser une presence en ligne serieuse avec un design premium.",
+          "Pour présenter ton activité, rassurer tes visiteurs et poser une présence en ligne sérieuse avec un design premium et une interface responsive.",
         link: "https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure",
       },
       {
-        title: "E-commerce",
+        title: "Boutiques e-commerce",
         description:
-          "Pour vendre en ligne avec un parcours d'achat plus simple, plus lisible et plus convaincant.",
+          "Pour vendre en ligne avec un parcours d'achat simple, lisible et convaincant, et une interface optimisée pour la conversion.",
         link: "https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure",
       },
       {
-        title: "Landing page",
+        title: "Landing pages performantes",
         description:
-          "Pour lancer une offre, capter des leads ou mettre en avant un produit avec une page concentree sur la conversion.",
+          "Pour lancer une offre, capter des leads ou mettre en avant un produit avec une page concentrée sur la conversion et un chargement rapide.",
         link: "https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure",
       },
     ],
-    portfolioTitlePrefix: "Decouvre",
+    portfolioTitlePrefix: "Découvre",
     portfolioTitleMiddle: "mon",
     portfolioTitleAccent: "portfolio",
     paginationLabel: "Pagination projets",
@@ -261,14 +308,14 @@ export const content = {
       {
         period: "2023 - Aujourd'hui",
         company: "Freelance",
-        role: "Developpeur web front-end",
-        text: "Creation de portfolios, landing pages et sites vitrines sur mesure avec un focus sur l'experience et la lisibilite.",
+        role: "Développeur frontend",
+        text: "Création de portfolios, landing pages et sites vitrines sur mesure avec React, Next.js et Tailwind CSS, avec un focus sur l'expérience utilisateur et la performance.",
       },
       {
         period: "2023 - 2026",
         company: "ESM-Bénin | Licence",
         role: "SIL",
-        text: "Formation en Systèmes Informatiques et Logiciels(SIL). Conception de systèmes informatiques et bases de données.",
+        text: "Formation en Systèmes Informatiques et Logiciels (SIL). Conception de systèmes informatiques et de bases de données.",
       },
       {
         period: "Juil. 2025 - En cours",
@@ -279,58 +326,68 @@ export const content = {
       {
         period: "2023 - 2024",
         company: "Autoformation intensive",
-        role: "Developpeur front-end",
-        text: "Montee en competence continue sur React, Next.js, TypeScript, Tailwind CSS et Laravel avec des projets concrets.",
+        role: "Développeur frontend",
+        text: "Montée en compétence continue sur React, Next.js, TypeScript, Tailwind CSS et Laravel avec des projets concrets.",
       },
     ],
-    testimonialsTitleTop: "Des temoignages qui",
-    testimonialsTitleBottom: "parlent de mes resultats",
+    testimonialsTitleTop: "Des témoignages qui",
+    testimonialsTitleBottom: "parlent de mes résultats",
     testimonialsText:
-      "Quelques retours qui resument mon approche : plus de clarte, un rendu plus propre et une direction visuelle qui fait tout de suite plus serieuse.",
+      "Quelques retours qui résument mon approche : plus de clarté, un rendu plus propre et une direction visuelle qui fait tout de suite plus sérieuse.",
     testimonials: [
       {
         name: "Client freelance",
         role: "Site vitrine",
         quote:
-          "Tres bon sens du detail, une vraie progression sur la qualite visuelle et une execution propre.",
+          "Très bon sens du détail, une vraie progression sur la qualité visuelle et une exécution propre.",
       },
       {
         name: "Projet produit",
         role: "Dashboard",
         quote:
-          "Le resultat est plus premium, mieux structure et plus rassurant que la version initiale.",
+          "Le résultat est plus premium, mieux structuré et plus rassurant que la version initiale.",
       },
       {
-        name: "Collaboration creative",
+        name: "Collaboration créative",
         role: "Landing page",
         quote:
-          "Bonne comprehension du besoin, propositions visuelles pertinentes et integration responsive reussie.",
+          "Bonne compréhension du besoin, propositions visuelles pertinentes et intégration responsive réussie.",
       },
     ],
     faqTitlePrefix: "Questions",
-    faqTitleAccent: "frequentes",
+    faqTitleAccent: "fréquentes",
     faqText:
-      "Les reponses les plus utiles avant de lancer une collaboration ensemble.",
+      "Les réponses les plus utiles avant de lancer une collaboration ensemble.",
     faqItems: [
       {
-        question: "Quels types de projets peux-tu realiser ?",
+        question: "Quels types de projets peux-tu réaliser ?",
         answer:
-          "Je peux realiser des sites vitrines, landing pages, applications web, refontes, blogs et boutiques e-commerce selon ton besoin.",
+          "Je réalise des sites vitrines, landing pages, applications web, dashboards, refontes et boutiques e-commerce, avec une interface moderne, responsive et pensée pour la conversion.",
       },
       {
-        question: "Travaille-tu uniquement sur le design ou aussi sur l'integration ?",
+        question: "Travaille-tu uniquement sur le design ou aussi sur l'intégration ?",
         answer:
-          "Je peux intervenir sur la direction visuelle, l'integration front-end ou prendre en charge les deux pour garder une experience coherente.",
+          "Je peux intervenir sur la direction visuelle, l'intégration frontend ou prendre en charge les deux pour garder une expérience cohérente. L'intégration de maquettes Figma vers du code (React, Next.js) fait partie de mon quotidien.",
       },
       {
-        question: "Peux-tu ameliorer un site deja en ligne ?",
+        question: "Peux-tu améliorer un site déjà en ligne ?",
         answer:
-          "Oui. Je peux repartir d'un site existant pour corriger des bugs, moderniser l'interface ou revoir la structure pour le rendre plus clair.",
+          "Oui. Je peux repartir d'un site existant pour corriger des bugs, moderniser l'interface, améliorer la performance ou revoir la structure pour le rendre plus clair et plus rapide.",
       },
       {
-        question: "Comment demarre une collaboration ?",
+        question: "Quelles technologies utilises-tu pour le développement frontend ?",
         answer:
-          "On echange d'abord sur l'objectif, le contenu et le delai. Ensuite je propose une direction claire avant de passer a la production.",
+          "Je développe principalement avec React, Next.js, TypeScript, JavaScript et Tailwind CSS. J'utilise aussi Laravel, PHP et MySQL côté backend lorsque le projet le nécessite.",
+      },
+      {
+        question: "Comment démarre une collaboration ?",
+        answer:
+          "On échange d'abord sur l'objectif, le contenu et le délai. Ensuite je propose une direction claire et une maquette avant de passer à la production.",
+      },
+      {
+        question: "Interviens-tu aussi sur la performance et le référencement ?",
+        answer:
+          "Oui. J'optimise le chargement, le responsive et les Core Web Vitals, et j'applique les bonnes pratiques de SEO technique (balises, données structurées, sitemap) pour que ton site soit rapide et bien référencé.",
       },
     ],
     contactTitleTop: "Tu as un projet",
@@ -341,71 +398,83 @@ export const content = {
       "★ 4.9/5 avis moyens",
       "◉ Front-end responsive",
       "◈ Approche design produit",
+      "◉ Basé à Cotonou, Bénin",
     ],
     marquee:
-      "UX Research ✦ UI Design ✦ App Design ✦ Dashboard ✦ Site Vitrine ✦ Landing Page ✦ App Web ✦ Responsive Web ✦",
+      "Frontend Development ✦ React ✦ Next.js ✦ TypeScript ✦ Tailwind CSS ✦ UI Design ✦ Dashboard ✦ Landing Page ✦ Responsive Web ✦",
     footerTitle: "Restons en contact",
     footerDescription:
-      "Developpeur web full-stack. Je cree des experiences visuelles plus fortes pour les projets qui veulent sortir du lot.",
+      "Frontend Developer basé au Bénin. Je conçois et développe des interfaces web modernes, responsives et performantes avec React, Next.js, TypeScript et Tailwind CSS — pour des projets ambitieux en Afrique francophone et à l'international.",
     footerNavigation: "Navigation",
     footerContact: "Contact",
-    footerNews: "Recevoir les dernieres infos",
+    footerNews: "Recevoir les dernières infos",
     footerEmailPlaceholder: "Adresse email",
     footerCopyright:
-      "Copyright© 2026 Jean-Barron ALOKPON. Tous droits reserves.",
+      "Copyright© 2026 Jean-Barron ALOKPON. Tous droits réservés.",
     footerTerms: "Conditions d'utilisation",
-    footerPrivacy: "Politique de confidentialite",
+    footerPrivacy: "Politique de confidentialité",
   },
   en: {
-    brandRole: "Web Developer",
+    seoTitle: "Frontend Developer in Benin | Jean-Barron ALOKPON",
+    seoDescription:
+      "Jean-Barron ALOKPON (BarronDev), Frontend Developer based in Benin. I design and build modern, high-performance, responsive web interfaces with React, Next.js, TypeScript, JavaScript, and Tailwind CSS. Custom showcase websites, web apps, dashboards, and landing pages.",
+    brandRole: "Frontend Developer",
+    logoAlt: "BarronDev logo — Jean-Barron ALOKPON, Frontend Developer",
+    heroPortraitAlt: "Jean-Barron ALOKPON, Frontend Developer in Benin",
+    aboutPortraitAlt: "Portrait of Jean-Barron ALOKPON, frontend developer in Cotonou, Benin",
+    projectImageAlt: "responsive web interface",
+    stackLabel: "Core stack",
+    serviceCta: "View offer",
+    serviceInternalCta: "Discuss your project",
     hireMe: "Hire me",
     hello: "Hello!",
     heroLead:
-      "I design elegant interfaces and build modern websites with strong attention to the final visual quality.",
+      "I design modern, high-performance web interfaces and build custom websites with React, Next.js, and TypeScript — with strong attention to the final visual quality.",
     heroTitlePrefix: "I'm",
     heroTitleName: "Jean-Barron",
-    heroTitleSuffix: "web developer",
+    heroTitleSuffix: "Frontend Developer",
     heroPrimaryCta: "View portfolio",
     heroSecondaryCta: "Contact me",
     heroExperience: "Years Experience",
-    aboutDate: "Apr 2026",
+    aboutDate: "Frontend Developer · Cotonou, Benin",
     aboutTitlePrefix: "Why",
     aboutTitleAccent: "hire me",
     aboutTitleSuffix: "?",
     aboutText:
-      "I turn an idea or an existing website into an interface that feels cleaner, more premium, and more consistent. My work combines visual design, product structure, and clean front-end integration.",
+      "I'm Jean-Barron ALOKPON (BarronDev), a Frontend Developer based in Cotonou, Benin. I design and build modern, high-performance, responsive web interfaces with React, Next.js, TypeScript, JavaScript, and Tailwind CSS. My work combines visual design, component architecture, and clean frontend integration — for companies, startups, and entrepreneurs across French-speaking Africa and beyond.",
     aboutButton: "View resume",
     metrics: [
       { value: "12+", label: "Projects delivered" },
       { value: "04", label: "Years building for the web" },
     ],
+    mainStack: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"],
     servicesTitlePrefix: "My",
     servicesTitleAccent: "services",
     servicesText:
-      "Four clear service formats to launch, present, or sell a product with polished execution and a professional feel.",
+      "Four clear service formats to launch, present, or sell a product with polished frontend execution, a professional feel, and conversion-focused interfaces.",
     services: [
       {
-        title: "Web or mobile app",
+        title: "Web app development",
         description:
-          "For a client area, internal tool, or digital product with an interface designed to feel clear, fluid, and practical.",
+          "For a client area, internal tool, or digital product: a web application with a clear, fluid interface designed for real usage.",
         link: "https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure",
       },
       {
-        title: "Showcase website",
+        title: "Modern showcase websites",
         description:
-          "To present your business, reassure visitors, and build a serious online presence with a premium design direction.",
+          "To present your business, reassure visitors, and build a serious online presence with a premium design and a responsive interface.",
         link: "https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure",
       },
       {
-        title: "E-commerce",
+        title: "E-commerce stores",
         description:
-          "To sell online with a buying journey that feels simpler, clearer, and more convincing.",
+          "To sell online with a buying journey that feels simple, clear, and convincing, and an interface optimized for conversion.",
         link: "https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure",
       },
       {
-        title: "Landing page",
+        title: "High-performance landing pages",
         description:
-          "To launch an offer, capture leads, or highlight a product with a page focused on conversion.",
+          "To launch an offer, capture leads, or highlight a product with a page focused on conversion and fast loading.",
         link: "https://comeup.com/fr/service/513245/creer-votre-site-web-vitrine-e-commerce-optimise-seo-sur-mesure",
       },
     ],
@@ -422,8 +491,8 @@ export const content = {
       {
         period: "2023 - Present",
         company: "Freelance, Benin",
-        role: "Front-end web developer",
-        text: "Building custom portfolios, landing pages, and showcase websites with a strong focus on clarity and experience.",
+        role: "Frontend developer",
+        text: "Building custom portfolios, landing pages, and showcase websites with React, Next.js, and Tailwind CSS, with a strong focus on user experience and performance.",
       },
       {
         period: "2023 - 2026",
@@ -440,7 +509,7 @@ export const content = {
       {
         period: "2023 - 2024",
         company: "Intensive self-training",
-        role: "Front-end developer",
+        role: "Frontend developer",
         text: "Continuous skill building across React, Next.js, Tailwind CSS, PHP, and Laravel through practical projects.",
       },
     ],
@@ -476,22 +545,32 @@ export const content = {
       {
         question: "What kind of projects can you build?",
         answer:
-          "I can build showcase websites, landing pages, web apps, redesigns, blogs, and e-commerce experiences depending on your goal.",
+          "I build showcase websites, landing pages, web apps, dashboards, redesigns, and e-commerce experiences with a modern, responsive interface designed for conversion.",
       },
       {
         question: "Do you only handle design or also implementation?",
         answer:
-          "I can help with visual direction, front-end implementation, or both so the final experience stays consistent.",
+          "I can help with visual direction, frontend implementation, or both so the final experience stays consistent. Turning Figma mockups into code (React, Next.js) is part of my daily work.",
       },
       {
         question: "Can you improve an existing website?",
         answer:
-          "Yes. I can start from an existing website to fix bugs, modernize the interface, or rethink the structure for more clarity.",
+          "Yes. I can start from an existing website to fix bugs, modernize the interface, improve performance, or rethink the structure for more clarity and speed.",
+      },
+      {
+        question: "What technologies do you use for frontend development?",
+        answer:
+          "I mainly build with React, Next.js, TypeScript, JavaScript, and Tailwind CSS. I also use Laravel, PHP, and MySQL on the backend when a project requires it.",
       },
       {
         question: "How does a collaboration usually start?",
         answer:
-          "We first align on the goal, content, and timeline. Then I suggest a clear direction before moving into production.",
+          "We first align on the goal, content, and timeline. Then I suggest a clear direction and a mockup before moving into production.",
+      },
+      {
+        question: "Do you also work on performance and SEO?",
+        answer:
+          "Yes. I optimize loading speed, responsiveness, and Core Web Vitals, and I apply technical SEO best practices (tags, structured data, sitemap) so your site is fast and well-ranked.",
       },
     ],
     contactTitleTop: "Do you have a project",
@@ -502,12 +581,13 @@ export const content = {
       "★ 4.9/5 average reviews",
       "◉ Responsive front-end",
       "◈ Product design mindset",
+      "◉ Based in Cotonou, Benin",
     ],
     marquee:
-      "UX Research ✦ UI Design ✦ App Design ✦ Dashboard ✦ Showcase Website ✦ Landing Page ✦ Web App ✦ Responsive Web ✦",
+      "Frontend Development ✦ React ✦ Next.js ✦ TypeScript ✦ Tailwind CSS ✦ UI Design ✦ Dashboard ✦ Landing Page ✦ Responsive Web ✦",
     footerTitle: "Let's stay connected",
     footerDescription:
-      "Full-stack web developer creating stronger visual experiences for projects that want to stand out.",
+      "Frontend Developer based in Benin. I design and build modern, responsive, high-performance web interfaces with React, Next.js, TypeScript, and Tailwind CSS — for ambitious projects across French-speaking Africa and worldwide.",
     footerNavigation: "Navigation",
     footerContact: "Contact",
     footerNews: "Get the latest updates",

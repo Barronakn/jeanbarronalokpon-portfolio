@@ -4,19 +4,183 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#ff8a3d" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="description"
-    content="Découvrez le portfolio de Jean-Barron Alokpon, développeur web full-stack spécialisé en Laravel, React.js et TailwindCSS. Création de sites web performants, optimisés pour le référencement et l'expérience utilisateur.">
-  <meta name="keywords"
-    content="Jean-Barron Alokpon, développeur web, full-stack, frontend, backend, Laravel, React.js, TailwindCSS, création de site web, site vitrine, site e-commerce, optimisation SEO, développement web, freelance, web design, programmation, application web, référencement naturel, responsive design, UX/UI, développeur Laravel, développeur React, site multilingue">
+    content="Jean-Barron ALOKPON (BarronDev), Frontend Developer au Bénin. Je conçois et développe des interfaces web modernes, performantes et responsives avec React, Next.js, TypeScript, JavaScript et Tailwind CSS. Sites vitrines, applications web, dashboards et landing pages sur mesure." />
 
+  <!-- Canonical -->
+  <link rel="canonical" href="https://jeanbarronalokpon-portfolio.vercel.app/fr/" />
 
-  <link rel="shortcut icon" href="../src/assets/img/logo.png" type="image/x-icon">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="fr" href="https://jeanbarronalokpon-portfolio.vercel.app/fr/" />
+  <link rel="alternate" hreflang="en" href="https://jeanbarronalokpon-portfolio.vercel.app/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://jeanbarronalokpon-portfolio.vercel.app/fr/" />
 
+  <title>Frontend Developer au Bénin | Jean-Barron ALOKPON</title>
 
-  <title>Portfolio - Jean-Barron ALOKPON</title>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BarronDev — Jean-Barron ALOKPON" />
+  <meta property="og:url" content="https://jeanbarronalokpon-portfolio.vercel.app/fr/" />
+  <meta property="og:title" content="Frontend Developer au Bénin | Jean-Barron ALOKPON" />
+  <meta property="og:description"
+    content="Frontend Developer spécialisé en React, Next.js, TypeScript et Tailwind CSS. Interfaces web modernes, performantes et responsives — Cotonou, Bénin, Afrique francophone." />
+  <meta property="og:image" content="https://jeanbarronalokpon-portfolio.vercel.app/og-image.png" />
+  <meta property="og:image:alt" content="Portfolio de Jean-Barron ALOKPON, Frontend Developer au Bénin" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Frontend Developer au Bénin | Jean-Barron ALOKPON" />
+  <meta name="twitter:description"
+    content="Interfaces web modernes, performantes et responsives avec React, Next.js, TypeScript et Tailwind CSS. Basé au Bénin." />
+  <meta name="twitter:image" content="https://jeanbarronalokpon-portfolio.vercel.app/og-image.png" />
+
+  <!-- Icônes -->
+  <link rel="icon" href="%PUBLIC_URL%/logo.png" type="image/png" sizes="500x500" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+  <!-- Polices : preconnect + stylesheet (remplace l'@import bloquant) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Syne:wght@400;500;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Données structurées JSON-LD -->
+  <script type="application/ld+json" id="seo-jsonld">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://jeanbarronalokpon-portfolio.vercel.app/fr/#person",
+        "name": "Jean-Barron ALOKPON",
+        "alternateName": "BarronDev",
+        "url": "https://jeanbarronalokpon-portfolio.vercel.app/fr/",
+        "image": "https://jeanbarronalokpon-portfolio.vercel.app/og-image.png",
+        "jobTitle": "Frontend Developer",
+        "description": "Frontend Developer au Bénin, spécialisé dans la conception et le développement d'interfaces web modernes, performantes et responsives avec React, Next.js, TypeScript, JavaScript et Tailwind CSS.",
+        "knowsAbout": ["Frontend Development", "React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "UI Design", "Responsive Web Design", "Web Performance", "Accessibility", "Laravel", "PHP", "MySQL"],
+        "knowsLanguage": ["fr", "en"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cotonou",
+          "addressCountry": "BJ"
+        },
+        "nationality": "Benin",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        },
+        "sameAs": [
+          "https://github.com/Barronakn",
+          "https://www.linkedin.com/in/jean-barron-alokpon"
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://jeanbarronalokpon-portfolio.vercel.app/fr/#website",
+        "url": "https://jeanbarronalokpon-portfolio.vercel.app/fr/",
+        "name": "BarronDev | Jean-Barron ALOKPON",
+        "description": "Portfolio de Jean-Barron ALOKPON, Frontend Developer au Bénin spécialisé en React, Next.js, TypeScript et Tailwind CSS.",
+        "inLanguage": "fr",
+        "publisher": { "@id": "https://jeanbarronalokpon-portfolio.vercel.app/fr/#person" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "@id": "https://jeanbarronalokpon-portfolio.vercel.app/fr/#profile",
+        "url": "https://jeanbarronalokpon-portfolio.vercel.app/fr/",
+        "name": "Jean-Barron ALOKPON | Frontend Developer",
+        "inLanguage": "fr",
+        "mainEntity": { "@id": "https://jeanbarronalokpon-portfolio.vercel.app/fr/#person" },
+        "isPartOf": { "@id": "https://jeanbarronalokpon-portfolio.vercel.app/fr/#website" }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "@id": "https://jeanbarronalokpon-portfolio.vercel.app/fr/#service",
+        "name": "Développement Frontend — React, Next.js, TypeScript",
+        "serviceType": "Frontend Development",
+        "provider": { "@id": "https://jeanbarronalokpon-portfolio.vercel.app/fr/#person" },
+        "areaServed": [
+          { "@type": "Country", "name": "Benin" },
+          { "@type": "AdministrativeArea", "name": "Afrique francophone" }
+        ],
+        "offers": {
+          "@type": "Offer",
+          "description": "Sites vitrines, applications web, dashboards, e-commerce et landing pages sur mesure, avec des interfaces modernes, responsives et performantes."
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quels types de projets peux-tu réaliser ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Je réalise des sites vitrines, landing pages, applications web, dashboards, refontes et boutiques e-commerce, avec une interface moderne, responsive et pensée pour la conversion."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Travaille-tu uniquement sur le design ou aussi sur l'intégration ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Je peux intervenir sur la direction visuelle, l'intégration frontend ou prendre en charge les deux pour garder une expérience cohérente. L'intégration de maquettes Figma vers du code (React, Next.js) fait partie de mon quotidien."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Peux-tu améliorer un site déjà en ligne ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. Je peux repartir d'un site existant pour corriger des bugs, moderniser l'interface, améliorer la performance ou revoir la structure pour le rendre plus clair et plus rapide."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quelles technologies utilises-tu pour le développement frontend ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Je développe principalement avec React, Next.js, TypeScript, JavaScript et Tailwind CSS. J'utilise aussi Laravel, PHP et MySQL côté backend lorsque le projet le nécessite."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment démarre une collaboration ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On échange d'abord sur l'objectif, le contenu et le délai. Ensuite je propose une direction claire et une maquette avant de passer à la production."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Interviens-tu aussi sur la performance et le référencement ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui. J'optimise le chargement, le responsive et les Core Web Vitals, et j'applique les bonnes pratiques de SEO technique (balises, données structurées, sitemap) pour que ton site soit rapide et bien référencé."
+            }
+          }
+        ]
+      }
+    ]
+  </script>
+
+  <noscript>
+    <div style="font-family: sans-serif; padding: 2rem; text-align: center">
+      <h1>Jean-Barron ALOKPON — Frontend Developer au Bénin</h1>
+      <p>Je conçois et développe des interfaces web modernes, performantes et responsives avec React, Next.js,
+        TypeScript, JavaScript et Tailwind CSS.</p>
+      <p>Contact : <a href="mailto:jeanbarronalokpon@gmail.com">jeanbarronalokpon@gmail.com</a> · +229 61 22 50 71</p>
+    </div>
+  </noscript>
 </head>
 
 <body>
