@@ -16,23 +16,6 @@ const loadPrefixedImages = (prefix) => {
 const projectImages = loadPrefixedImages("project-");
 
 const projectMeta = {
-  "project-ballamas": {
-    fr: {
-      title: "Ballamas",
-      shortTitle: "Ballamas",
-      description:
-        "Un exercice d'intégration Figma vers code avec une attention particulière portée à la fidélité visuelle, au rythme et au rendu responsive de l'interface.",
-      tags: ["Intégration Figma", "Interface responsive", "Design visuel"],
-    },
-    en: {
-      title: "Ballamas",
-      shortTitle: "Ballamas",
-      description:
-        "A Figma-to-code build focused on visual fidelity, rhythm, and responsive execution.",
-      tags: ["Figma to Code", "Responsive UI", "Visual Design"],
-    },
-    link: "https://figma-to-code-ed2-week-two.vercel.app/",
-  },
   "project-cargo": {
     fr: {
       title: "Site vitrine sur mesure",
@@ -117,23 +100,6 @@ const projectMeta = {
       tags: ["Showcase", "Local", "Branding"],
     },
     link: "https://ja-sphere.com/",
-  },
-  "project-nft": {
-    fr: {
-      title: "NFT Landing",
-      shortTitle: "NFT",
-      description:
-        "Une landing page expérimentale pour travailler l'impact visuel, les contrastes et le storytelling produit.",
-      tags: ["Landing page", "Storytelling", "UI"],
-    },
-    en: {
-      title: "NFT Landing",
-      shortTitle: "NFT",
-      description:
-        "An experimental landing page focused on visual impact, contrast, and product storytelling.",
-      tags: ["Landing Page", "Storytelling", "UI"],
-    },
-    link: "https://figma-to-code-ed2-week-one.vercel.app/s",
   },
   "project-utt": {
     fr: {
