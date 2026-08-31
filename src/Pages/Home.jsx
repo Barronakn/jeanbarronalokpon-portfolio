@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import logo from "../assets/img/logo.png";
 import portrait from "../assets/img/Barron-transparent.webp";
 import cv from "../assets/img/Jean-Barron E. ALOKPON CV 2025.pdf";
+import Hero24 from "../components/originkit/hero-24";
 import {
   content,
   navigation,
@@ -199,7 +200,7 @@ const Home = () => {
     >
       <Analytics />
 
-      <section className="px-4 pb-2 pt-4 sm:px-6 sm:pt-6 lg:px-8">
+      <section className="absolute left-0 right-0 top-0 z-50 px-4 sm:px-6 lg:px-8">
         <nav className="fixed left-4 right-4 top-4 z-50 mx-auto flex max-w-6xl items-center justify-between rounded-[1.7rem] bg-[#1f1f1f]/95 px-3 py-3 text-white shadow-[0_18px_60px_rgba(15,23,42,0.12)] backdrop-blur-md sm:left-6 sm:right-6 sm:top-6 sm:rounded-[1.9rem] sm:px-6 lg:left-1/2 lg:right-auto lg:w-[calc(100%-4rem)] lg:-translate-x-1/2">
           <a href={`/${locale}#home`} className="flex items-center gap-3">
             <img
@@ -342,108 +343,7 @@ const Home = () => {
         </button>
       </div>
 
-      <div className="h-[5.9rem] sm:h-[6.9rem]" />
-
-      <section className="relative overflow-hidden px-4 pb-10 pt-8 sm:px-6 lg:px-8">
-        <div className="hero-blob hero-blob-left" />
-        <div className="hero-blob hero-blob-right" />
-        <div className="mx-auto grid max-w-6xl items-start gap-8 lg:grid-cols-[0.78fr_1.44fr_0.78fr] lg:gap-6">
-          <div className="order-2 hidden pt-10 md:block lg:order-1 lg:pt-[18rem]">
-            <div className="max-w-[16rem]">
-              <div className="mb-4 text-[#34425d]">
-                <span className="font-display text-5xl leading-none">“</span>
-              </div>
-              <p className="text-[1.05rem] leading-8 text-slate-700">{t.heroLead}</p>
-            </div>
-            <span className="hero-doodle hero-doodle-left hidden lg:block" />
-          </div>
-
-          <div className="order-1 text-center lg:order-2">
-            <span className="mb-4 inline-flex rounded-full border border-slate-900/60 px-5 py-2 text-sm font-medium text-slate-800">
-              {t.hello}
-            </span>
-            <div className="relative mx-auto mt-2 flex max-w-[520px] flex-col items-center">
-              <h1 className="pointer-events-none relative z-0 max-w-[18rem] font-display text-[1.5rem] font-extrabold leading-[0.98] tracking-[-0.05em] text-[#111111] sm:max-w-[22rem] sm:text-[1.95rem] md:max-w-[24rem] md:text-[2.3rem] lg:max-w-[30rem] lg:text-[3.25rem]">
-                <span className="block">{t.heroTitlePrefix}</span>
-                <span className="block whitespace-nowrap text-[#ff8a3d]">{t.heroTitleName},</span>
-                <span className="block">{t.heroTitleSuffix}</span>
-              </h1>
-
-              <div className="relative z-10 -mt-3 flex w-full max-w-[330px] items-end justify-center sm:-mt-6 sm:max-w-[390px] md:max-w-[450px] lg:-mt-12">
-                <span className="hero-doodle hero-doodle-top hidden lg:block" />
-                <div className="absolute inset-x-0 bottom-0 h-[70%] rounded-t-[999px] bg-[#ffb97a]" />
-                <img
-                  src={portrait}
-                  alt={t.heroPortraitAlt}
-                  width="470"
-                  height="530"
-                  loading="eager"
-                  fetchpriority="high"
-                  decoding="async"
-                  className="relative z-10 max-h-[360px] object-contain drop-shadow-[0_24px_80px_rgba(15,23,42,0.16)] sm:max-h-[430px] lg:max-h-[520px]"
-                />
-                <div className="absolute bottom-4 left-1/2 z-20 flex w-[92%] -translate-x-1/2 flex-col rounded-[1.8rem] border border-white/50 bg-[#d76f32]/35 p-2 text-white shadow-[0_18px_60px_rgba(255,138,61,0.24)] backdrop-blur-md sm:bottom-6 sm:w-[82%] sm:flex-row sm:rounded-full">
-                  <a
-                    href={`/${locale}#portfolio`}
-                    className="flex-1 rounded-full bg-[#ff8a3d] px-4 py-3 text-sm font-semibold transition hover:bg-[#f97822] sm:px-5"
-                  >
-                    <span className="inline-flex items-center gap-2">
-                      {t.heroPrimaryCta}
-                      <ArrowUpRightIcon className="h-4 w-4" />
-                    </span>
-                  </a>
-                  <a
-                    href="mailto:jeanbarronalokpon@gmail.com"
-                    className="flex-1 rounded-full px-4 py-3 text-sm font-semibold transition hover:bg-white/10 sm:px-5"
-                  >
-                    {t.heroSecondaryCta}
-                  </a>
-                </div>
-              </div>
-
-              <div className="mt-6 grid w-full max-w-[26rem] grid-cols-1 gap-5 text-left md:hidden">
-                <div className="mx-auto w-full max-w-[18rem]">
-                  <div className="mb-3 text-[#34425d]">
-                    <span className="font-display text-4xl leading-none">“</span>
-                  </div>
-                  <p className="text-[0.98rem] leading-7 text-slate-700">
-                    {t.heroLead}
-                  </p>
-                </div>
-                <div className="mx-auto w-full max-w-[18rem]">
-                  <div className="mb-3 flex items-center gap-1 text-xl text-[#ff8a3d]">
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <StarIcon key={index} className="h-5 w-5" />
-                    ))}
-                  </div>
-                  <p className="font-display text-3xl font-extrabold tracking-[-0.05em] text-[#111111]">
-                    4+
-                  </p>
-                  <p className="mt-1 text-base font-medium leading-6 text-[#34425d]">
-                    {t.heroExperience}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="order-3 hidden pt-10 md:block lg:flex lg:justify-end lg:pt-[18rem]">
-            <div className="text-left lg:text-right">
-              <div className="mb-4 flex items-center gap-1 text-2xl text-[#ff8a3d] lg:justify-end">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <StarIcon key={index} className="h-6 w-6" />
-                ))}
-              </div>
-              <p className="font-display text-4xl font-extrabold tracking-[-0.05em] text-[#111111] sm:text-[3.3rem]">
-                4+
-              </p>
-              <p className="mt-1 text-base font-medium leading-6 text-[#34425d]">
-                {t.heroExperience}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero24 locale={locale} />
 
       <section id="about" className="px-4 py-10 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-8 rounded-[2.2rem] bg-[#edf1f7] p-6 sm:gap-10 sm:rounded-[2.8rem] sm:p-8 lg:grid-cols-[0.95fr_1.05fr] lg:p-12">

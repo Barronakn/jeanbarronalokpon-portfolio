@@ -302,10 +302,10 @@ export const content = {
       "Quelques retours qui résument mon approche : plus de clarté, un rendu plus propre et une direction visuelle qui fait tout de suite plus sérieuse.",
     testimonials: [
       {
-        name: "Client freelance",
-        role: "Site vitrine",
+        name: "Yousra Bendida",
+        role: "",
         quote:
-          "Très bon sens du détail, une vraie progression sur la qualité visuelle et une exécution propre.",
+          "J'ai grave aimé, surtout ta rapidité à livrer.",
       },
       {
         name: "Projet produit",
@@ -485,10 +485,10 @@ export const content = {
       "A few comments that summarize my approach: more clarity, cleaner execution, and a visual direction that instantly feels more serious.",
     testimonials: [
       {
-        name: "Freelance client",
-        role: "Showcase website",
+        name: "Yousra Bendida",
+        role: "",
         quote:
-          "Great eye for detail, clear visual progress, and a polished execution from start to finish.",
+          "I loved it, especially how quickly you delivered.",
       },
       {
         name: "Product project",

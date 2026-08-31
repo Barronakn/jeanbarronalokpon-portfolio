@@ -10,7 +10,12 @@ module.exports = {
         "purple-sky": "#31065A",
         "sky-blue-light": "#AD5BFB",
         "purple-dark": "#43366A",
-      }
+      },
+      screens: {
+        'desktop-sm': '1280px',
+        'laptop': '1440px',
+        'wide': '1536px',
+      },
     },
   },
   plugins: [],
