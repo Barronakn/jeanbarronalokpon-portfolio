@@ -287,7 +287,7 @@ export const content = {
         period: "Juil. 2025 - En cours",
         company: "Soft Vodooz",
         role: "Développeur Web Frontend",
-        text: "Développement d'applications web modernes avec Next.js, Shadcn, TypeScript, Tailwind CSS, TanStack et maintenance.",
+        text: "Développement de SaaS, d'applications web modernes avec Next.js, Shadcn, TypeScript, Tailwind CSS, TanStack et maintenance.",
       },
       {
         period: "2023 - 2024",
@@ -303,18 +303,18 @@ export const content = {
     testimonials: [
       {
         name: "Yousra Bendida",
-        role: "",
+        role: "SaaS",
         quote:
           "J'ai grave aimé, surtout ta rapidité à livrer.",
       },
       {
-        name: "Projet produit",
+        name: "Adena George",
         role: "Dashboard",
         quote:
           "Le résultat est plus premium, mieux structuré et plus rassurant que la version initiale.",
       },
       {
-        name: "Collaboration créative",
+        name: "Antoine Ihupe",
         role: "Landing page",
         quote:
           "Bonne compréhension du besoin, propositions visuelles pertinentes et intégration responsive réussie.",
@@ -343,7 +343,7 @@ export const content = {
       {
         question: "Quelles technologies utilises-tu pour le développement frontend ?",
         answer:
-          "Je développe principalement avec React, Next.js, TypeScript, JavaScript et Tailwind CSS. J'utilise aussi Laravel, PHP et MySQL côté backend lorsque le projet le nécessite.",
+          "Je développe principalement avec React, Next.js, TypeScript, JavaScript et Tailwind CSS. J'utilise aussi Nestjs, Laravel, et PostgreSQL, MySQL côté backend lorsque le projet le nécessite.",
       },
       {
         question: "Comment démarre une collaboration ?",
@@ -470,7 +470,7 @@ export const content = {
         period: "Jul. 2025 - Present",
         company: "Soft Vodooz",
         role: "Frontend Web Developer",
-        text: "Building modern web applications with Next.js, Shadcn, TypeScript, Tailwind CSS, TanStack, and maintenance.",
+        text: "Building SaaS and modern web applications with Next.js, Shadcn, TypeScript, Tailwind CSS, TanStack, and maintenance.",
       },
       {
         period: "2023 - 2024",
@@ -486,18 +486,18 @@ export const content = {
     testimonials: [
       {
         name: "Yousra Bendida",
-        role: "",
+        role: "SaaS",
         quote:
           "I loved it, especially how quickly you delivered.",
       },
       {
-        name: "Product project",
+        name: "Adena George",
         role: "Dashboard",
         quote:
           "The result feels more premium, better structured, and much more reassuring than the initial version.",
       },
       {
-        name: "Creative collaboration",
+        name: "Antoine Ihupe",
         role: "Landing page",
         quote:
           "Strong understanding of the brief, relevant visual ideas, and a successful responsive implementation.",
