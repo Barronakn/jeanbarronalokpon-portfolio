@@ -198,12 +198,12 @@ export const socials = [
 
 export const content = {
   fr: {
-    seoTitle: "Frontend Developer au Bénin | Jean-Barron ALOKPON",
+    seoTitle: "Développeur Frontend au Bénin | Jean-Barron ALOKPON",
     seoDescription:
-      "Jean-Barron ALOKPON (BarronDev), Frontend Developer au Bénin. Je conçois et développe des interfaces web modernes, performantes et responsives avec React, Next.js, TypeScript, JavaScript et Tailwind CSS. Sites vitrines, applications web, dashboards et landing pages sur mesure.",
-    brandRole: "Frontend Developer",
-    logoAlt: "Logo BarronDev — Jean-Barron ALOKPON, Frontend Developer",
-    heroPortraitAlt: "Jean-Barron ALOKPON, Frontend Developer au Bénin",
+      "Jean-Barron ALOKPON (BarronDev), Développeur Frontend au Bénin. Je conçois et développe des interfaces web modernes, performantes et responsives avec React, Next.js, TypeScript, JavaScript et Tailwind CSS. Sites vitrines, applications web, dashboards et landing pages sur mesure.",
+    brandRole: "Développeur Frontend",
+    logoAlt: "Logo BarronDev — Jean-Barron ALOKPON, Développeur Frontend",
+    heroPortraitAlt: "Jean-Barron ALOKPON, Développeur Frontend au Bénin",
     aboutPortraitAlt: "Portrait de Jean-Barron ALOKPON, développeur frontend à Cotonou, Bénin",
     projectImageAlt: "interface web responsive",
     stackLabel: "Technologies principales",
@@ -215,16 +215,16 @@ export const content = {
       "Je conçois des interfaces web modernes et performantes et je développe des sites sur mesure avec React, Next.js et TypeScript — avec une vraie attention au rendu final.",
     heroTitlePrefix: "Je suis",
     heroTitleName: "Jean-Barron",
-    heroTitleSuffix: "Frontend Developer",
+    heroTitleSuffix: "Développeur Frontend",
     heroPrimaryCta: "Voir le portfolio",
     heroSecondaryCta: "Me contacter",
     heroExperience: "Années d'expérience",
-    aboutDate: "Frontend Developer · Cotonou, Bénin",
+    aboutDate: "Développeur Frontend · Cotonou, Bénin",
     aboutTitlePrefix: "Pourquoi",
     aboutTitleAccent: "m'engager",
     aboutTitleSuffix: "?",
     aboutText:
-      "Je suis Jean-Barron ALOKPON (BarronDev), Frontend Developer basé à Cotonou, au Bénin. Je conçois et développe des interfaces web modernes, performantes et responsives avec React, Next.js, TypeScript, JavaScript et Tailwind CSS. Mon travail combine design visuel, architecture de composants et intégration frontend propre — pour les entreprises, startups et entrepreneurs d'Afrique francophone et d'ailleurs.",
+      "Je suis Jean-Barron ALOKPON (BarronDev), Développeur Frontend basé à Cotonou, au Bénin. Je conçois et développe des interfaces web modernes, performantes et responsives avec React, Next.js, TypeScript, JavaScript et Tailwind CSS. Mon travail combine design visuel, architecture de composants et intégration frontend propre — pour les entreprises, startups et entrepreneurs d'Afrique francophone et d'ailleurs.",
     aboutButton: "Voir mon CV",
     metrics: [
       { value: "12+", label: "Projets livrés" },
@@ -370,7 +370,7 @@ export const content = {
       "Frontend Development ✦ React ✦ Next.js ✦ TypeScript ✦ Tailwind CSS ✦ UI Design ✦ Dashboard ✦ Landing Page ✦ Responsive Web ✦",
     footerTitle: "Restons en contact",
     footerDescription:
-      "Frontend Developer basé au Bénin. Je conçois et développe des interfaces web modernes, responsives et performantes avec React, Next.js, TypeScript et Tailwind CSS — pour des projets ambitieux en Afrique francophone et à l'international.",
+      "Développeur Frontend basé au Bénin. Je conçois et développe des interfaces web modernes, responsives et performantes avec React, Next.js, TypeScript et Tailwind CSS — pour des projets ambitieux en Afrique francophone et à l'international.",
     footerNavigation: "Navigation",
     footerContact: "Contact",
     footerNews: "Recevoir les dernières infos",

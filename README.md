@@ -1,7 +1,7 @@
 # Bienvenue sur mon portfolio !
 
 ## 📌 Description
-Je suis **Jean-Barron Alokpon** (BarronDev), **Frontend Developer** basé au **Bénin**, spécialisé dans la conception et le développement d'**interfaces web modernes, performantes et responsives** avec **React, Next.js, TypeScript, JavaScript et Tailwind CSS**.
+Je suis **Jean-Barron Alokpon** (BarronDev), **Développeur Frontend** basé au **Bénin**, spécialisé dans la conception et le développement d'**interfaces web modernes, performantes et responsives** avec **React, Next.js, TypeScript, JavaScript et Tailwind CSS**.
 
 ## 💡 Ce que je fais
 🔹 Conception et développement d'interfaces web modernes et responsives (React, Next.js, TypeScript, Tailwind CSS)  

@@ -8,7 +8,7 @@ const HERO_TEXT = {
     greeting: "Bonjour !",
     line1: "Je suis",
     line2: "Jean-Barron,",
-    role: "Frontend Developer",
+    role: "Développeur Frontend",
     statValue: "+4 ans",
     statLabel: "Expérience en Dev Web",
     cta1: "Voir mes projects",

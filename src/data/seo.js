@@ -42,9 +42,12 @@ const buildJsonLd = (url, ogLocale, t) => [
     alternateName: "BarronDev",
     url,
     image: `${SITE_URL}/og-image.png`,
-    jobTitle: "Frontend Developer",
+    jobTitle:
+      ogLocale === "en_US" ? "Frontend Developer" : "Développeur Frontend",
     description:
-      "Frontend Developer au Bénin, spécialisé dans la conception et le développement d'interfaces web modernes, performantes et responsives avec React, Next.js, TypeScript, JavaScript et Tailwind CSS.",
+      ogLocale === "en_US"
+        ? "Frontend Developer based in Benin, specializing in designing and building modern, high-performance, responsive web interfaces with React, Next.js, TypeScript, JavaScript and Tailwind CSS."
+        : "Développeur Frontend au Bénin, spécialisé dans la conception et le développement d'interfaces web modernes, performantes et responsives avec React, Next.js, TypeScript, JavaScript et Tailwind CSS.",
     knowsAbout: [
       "Frontend Development",
       "React",
@@ -80,7 +83,9 @@ const buildJsonLd = (url, ogLocale, t) => [
     url,
     name: "BarronDev | Jean-Barron ALOKPON",
     description:
-      "Portfolio de Jean-Barron ALOKPON, Frontend Developer au Bénin spécialisé en React, Next.js, TypeScript et Tailwind CSS.",
+      ogLocale === "en_US"
+        ? "Portfolio of Jean-Barron ALOKPON, Frontend Developer in Benin specialized in React, Next.js, TypeScript and Tailwind CSS."
+        : "Portfolio de Jean-Barron ALOKPON, Développeur Frontend au Bénin spécialisé en React, Next.js, TypeScript et Tailwind CSS.",
     inLanguage: ogLocale === "en_US" ? "en" : "fr",
     publisher: { "@id": `${url}#person` },
   },
@@ -89,7 +94,10 @@ const buildJsonLd = (url, ogLocale, t) => [
     "@type": "ProfilePage",
     "@id": `${url}#profile`,
     url,
-    name: "Jean-Barron ALOKPON | Frontend Developer",
+    name:
+      ogLocale === "en_US"
+        ? "Jean-Barron ALOKPON | Frontend Developer"
+        : "Jean-Barron ALOKPON | Développeur Frontend",
     inLanguage: ogLocale === "en_US" ? "en" : "fr",
     mainEntity: { "@id": `${url}#person` },
     isPartOf: { "@id": `${url}#website` },

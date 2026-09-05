@@ -1,7 +1,7 @@
 {
   "short_name": "BarronDev",
-  "name": "Jean-Barron ALOKPON | Frontend Developer",
-  "description": "Portfolio de Jean-Barron ALOKPON, Frontend Developer au Bénin spécialisé en React, Next.js, TypeScript et Tailwind CSS.",
+  "name": "Jean-Barron ALOKPON | Développeur Frontend",
+  "description": "Portfolio de Jean-Barron ALOKPON, Développeur Frontend au Bénin spécialisé en React, Next.js, TypeScript et Tailwind CSS.",
   "icons": [
     { "src": "favicon-192x192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "favicon-96x96.png", "sizes": "96x96", "type": "image/png" },
