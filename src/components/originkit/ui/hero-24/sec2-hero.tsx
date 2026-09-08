@@ -240,20 +240,6 @@ const PhoneFrame = ({ t }) => (
 
 const TabletFrame = ({ t }) => (
   <div className="relative h-[994px] w-[744px] overflow-clip">
-    {/* Top Nav */}
-    <div
-      style={delay(0)}
-      className={`${REVEAL} absolute left-0 top-0 flex h-[64px] w-[744px] items-center justify-center border border-solid border-[rgba(255,255,255,0.1)] px-[32px] py-[16px]`}
-    >
-      <div className="relative flex min-w-px flex-[1_0_0] items-center justify-between">
-        <a href="#home" className="relative shrink-0 whitespace-nowrap text-[28px] leading-[1.15] tracking-[-0.84px] text-white" style={{ fontFamily: '"Syne", sans-serif', fontWeight: 700 }}>
-          JeanBarron
-        </a>
-        <div className="relative size-[24px] shrink-0 cursor-pointer transition-opacity duration-200 hover:opacity-70">
-          <img alt="Menu" className="absolute inset-0 block size-full max-w-none" src={`${A}/menu.svg`} />
-        </div>
-      </div>
-    </div>
 
     {/* Copy */}
     <div className="absolute left-[149px] top-[120px] flex w-[446px] flex-col items-center gap-[32px]">
