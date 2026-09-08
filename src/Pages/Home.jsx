@@ -96,7 +96,7 @@ const Home = () => {
 
   useEffect(() => {
     const updateFooterHeight = () => {
-      const desktop = window.innerWidth >= 1024;
+      const desktop = window.innerWidth >= 1280;
       setIsDesktop(desktop);
       if (!footerRef.current) return;
       setFooterHeight(desktop ? footerRef.current.offsetHeight : 0);
@@ -849,11 +849,11 @@ const Home = () => {
 
       <footer
         ref={footerRef}
-        className="relative px-4 pb-6 pt-6 sm:px-6 sm:pb-8 sm:pt-8 lg:fixed lg:bottom-0 lg:left-0 lg:right-0 lg:z-0 lg:px-8 lg:pb-8 lg:pt-0"
+        className="relative px-4 pb-6 pt-6 sm:px-6 sm:pb-8 sm:pt-8 xl:fixed xl:bottom-0 xl:left-0 xl:right-0 xl:z-0 xl:px-8 xl:pb-8 xl:pt-0"
       >
         <div className="mx-auto max-w-7xl rounded-[2.1rem] bg-[#262626] px-5 py-8 text-white sm:rounded-[2.6rem] sm:px-10 sm:py-10">
-          <div className="flex flex-col gap-8 border-b border-white/12 pb-8 lg:flex-row lg:items-start lg:justify-between">
-            <h2 className="font-display text-[1.9rem] font-extrabold leading-[1.06] tracking-[-0.05em] sm:text-[2.4rem] lg:text-[3.1rem]">
+          <div className="flex flex-col gap-8 border-b border-white/12 pb-8 xl:flex-row xl:items-start xl:justify-between">
+            <h2 className="font-display text-[1.9rem] font-extrabold leading-[1.06] tracking-[-0.05em] sm:text-[2.4rem] xl:text-[3.1rem]">
               {t.footerTitle}
             </h2>
             <a
@@ -865,7 +865,7 @@ const Home = () => {
             </a>
           </div>
 
-          <div className="grid gap-10 py-10 lg:grid-cols-[1.2fr_0.6fr_0.7fr_0.9fr]">
+          <div className="grid gap-10 py-10 xl:grid-cols-[1.2fr_0.6fr_0.7fr_0.9fr]">
             <div>
               <div className="flex items-center gap-3">
                 <img
