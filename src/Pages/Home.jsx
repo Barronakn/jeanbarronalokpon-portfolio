@@ -37,7 +37,6 @@ const Home = () => {
     projectPage * projectsPerPage,
     projectPage * projectsPerPage + projectsPerPage
   );
-  const featuredProject = currentProjects[0] || t.projects[0];
 
   // SEO : title, meta description, canonical, hreflang et données structurées par langue
   useEffect(() => {
@@ -554,41 +553,6 @@ const Home = () => {
             </button>
           </div>
 
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {featuredProject.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-[#edf1f7] px-6 py-3 text-base text-slate-700"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-
-          <div className="mx-auto mt-10 max-w-3xl text-center">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-slate-400">
-              {t.featuredProjectLabel}
-            </p>
-            <a
-              href={featuredProject.link}
-              target={isExternalLink(featuredProject.link) ? "_blank" : undefined}
-              rel={isExternalLink(featuredProject.link) ? "noreferrer" : undefined}
-              className="inline-flex flex-wrap items-center justify-center gap-3 font-display text-[1.45rem] font-bold leading-[1.08] tracking-[-0.05em] text-[#34425d] sm:gap-4 sm:text-[2.1rem] lg:text-[2.55rem]"
-            >
-              {featuredProject.title}
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#ff8a3d] text-white sm:h-14 sm:w-14">
-                <ArrowUpRightIcon className="h-5 w-5 sm:h-7 sm:w-7" />
-              </span>
-            </a>
-            <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-              {featuredProject.description}
-            </p>
-            {!isExternalLink(featuredProject.link) && (
-              <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-[#ff8a3d]">
-                {t.projectFallbackLabel}
-              </p>
-            )}
-          </div>
         </div>
       </section>
 
