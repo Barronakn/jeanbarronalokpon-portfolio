@@ -14,6 +14,14 @@ const loadPrefixedImages = (prefix) => {
 };
 
 const projectImages = loadPrefixedImages("project-");
+const projectOrder = [
+  "project-jas",
+  "project-carte",
+  "project-fruity",
+  "project-cargo",
+  "project-utt",
+  "project-hemolife",
+];
 
 const projectMeta = {
   "project-cargo": {
@@ -138,7 +146,14 @@ const projectMeta = {
 };
 
 const buildProjects = (locale) =>
-  projectImages.map(({ key, image }) => {
+  [...projectImages].sort((a, b) => {
+    const aIndex = projectOrder.indexOf(a.key);
+    const bIndex = projectOrder.indexOf(b.key);
+    if (aIndex === -1 && bIndex === -1) return a.key.localeCompare(b.key);
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+    return aIndex - bIndex;
+  }).map(({ key, image }) => {
     const meta = projectMeta[key] || {
       fr: {
         title: key.replace("project-", ""),
