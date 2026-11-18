@@ -15,6 +15,7 @@ const loadPrefixedImages = (prefix) => {
 
 const projectImages = loadPrefixedImages("project-");
 const projectOrder = [
+  "project-patrimoine-benin",
   "project-jas",
   "project-carte",
   "project-fruity",
@@ -24,6 +25,23 @@ const projectOrder = [
 ];
 
 const projectMeta = {
+  "project-patrimoine-benin": {
+    fr: {
+      title: "Patrimoine Bénin — Musée numérique",
+      shortTitle: "Patrimoine Bénin",
+      description:
+        "Le musée numérique du patrimoine béninois : explorez les biens culturels du Bénin, leurs histoires, leurs usages et les parcours qui les ont conduits jusqu'à nous.",
+      tags: ["Musée numérique", "Patrimoine", "Culture"],
+    },
+    en: {
+      title: "Patrimoine Bénin — Digital Museum",
+      shortTitle: "Patrimoine Bénin",
+      description:
+        "The digital museum of Beninese heritage: explore Benin's cultural assets, their histories, their uses, and the journeys that brought them to us.",
+      tags: ["Digital Museum", "Heritage", "Culture"],
+    },
+    link: "https://www.patrimoine-benin.online/",
+  },
   "project-cargo": {
     fr: {
       title: "Site vitrine sur mesure",
